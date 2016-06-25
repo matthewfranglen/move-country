@@ -20,6 +20,11 @@
   max-width: $max-content-width;
 }
 
+.leaflet-container {
+  height: 400px;
+  width: 100%;
+}
+
 .news {
   padding: 0;
 }

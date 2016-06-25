@@ -16,5 +16,5 @@ export const action = async (state) => {
   const response = await fetch('/graphql?query={news{title,link,contentSnippet}}');
   const { data } = await response.json();
   state.context.onSetTitle('EU Emigration Evaluation');
-  return <Home news={data.news} />;
+  return <Home lat={51.505} lng={-0.09} zoom={13} />;
 };
