@@ -7,28 +7,37 @@
  * LICENSE.txt file in the root directory of this source tree.
  */
 
-import React, { Component } from 'react';
-import { Map, Marker } from 'react-leaflet';
+import React, { PropTypes } from 'react';
+import withStyles from 'isomorphic-style-loader/lib/withStyles';
+import s from './Home.scss';
 
-class WrappedMarker extends Component {
-  render() {
-    const { map, layerContainer } = this.props; //Given by the `Map` component
-    return (
-      <Marker
-        map={map} /* pass down to Marker */
-        layerContainer={layerContainer} /* pass down to Marker */
-        position={[51.505, -0.09]}
-      />
-    );
-  }
+function Home({ news }) {
+  return (
+    <div className={s.root}>
+      <div className={s.container}>
+        <h1 className={s.title}>React.js News</h1>
+        <ul className={s.news}>
+          {news.map((item, index) => (
+            <li key={index} className={s.newsItem}>
+              <a href={item.link} className={s.newsTitle}>{item.title}</a>
+              <span
+                className={s.newsDesc}
+                dangerouslySetInnerHTML={{ __html: item.contentSnippet }}
+              />
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  );
 }
 
-export default class MapView extends Component {
-  render() {
-    return (
-      <Map center={[51.505, -0.09]} zoom={13}>
-        <WrappedMarker />
-      </Map>
-    );
-  }
-}
+Home.propTypes = {
+  news: PropTypes.arrayOf(PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    link: PropTypes.string.isRequired,
+    contentSnippet: PropTypes.string,
+  })).isRequired,
+};
+
+export default withStyles(Home, s);
