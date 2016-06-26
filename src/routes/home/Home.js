@@ -1,124 +1,43 @@
-import { default as React, Component } from 'react';
-import { default as update } from 'react-addons-update';
-
-import { default as canUseDOM } from 'can-use-dom';
-import { default as _ } from 'lodash';
-
-import { GoogleMapLoader, GoogleMap, Marker } from 'react-google-maps';
-import { triggerEvent } from 'react-google-maps/lib/utils';
-
-/*
- * This is the modify version of:
- * https://developers.google.com/maps/documentation/javascript/examples/event-arguments
+/**
+ * React Starter Kit (https://www.reactstarterkit.com/)
  *
- * Add <script src="https://maps.googleapis.com/maps/api/js"></script> to your HTML to provide google.maps reference
+ * Copyright © 2014-2016 Kriasoft, LLC. All rights reserved.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE.txt file in the root directory of this source tree.
  */
-export default class GettingStarted extends Component {
 
-  constructor(props, context) {
-    super(props, context);
-    this.handleWindowResize = _.throttle(::this.handleWindowResize, 500);
-  }
+import React, { PropTypes } from 'react';
+import withStyles from 'isomorphic-style-loader/lib/withStyles';
+import s from './Home.scss';
 
-  state = {
-    markers: [{
-      position: {
-        lat: 25.0112183,
-        lng: 121.52067570000001,
-      },
-      key: 'Taiwan',
-      defaultAnimation: 2,
-    }],
-  }
-
-  componentDidMount() {
-    if (!canUseDOM) {
-      return;
-    }
-    window.addEventListener('resize', this.handleWindowResize);
-  }
-
-  componentWillUnmount() {
-    if (!canUseDOM) {
-      return;
-    }
-    window.removeEventListener('resize', this.handleWindowResize);
-  }
-
-  handleWindowResize() {
-    console.log('handleWindowResize', this._googleMapComponent);
-    triggerEvent(this._googleMapComponent, 'resize');
-  }
-
-  /*
-   * This is called when you click on the map.
-   * Go and try click now.
-   */
-  handleMapClick(event) {
-    let { markers } = this.state;
-    markers = update(markers, {
-      $push: [
-        {
-          position: event.latLng,
-          defaultAnimation: 2,
-          key: Date.now(), // Add a key property for: http://fb.me/react-warning-keys
-        },
-      ],
-    });
-    this.setState({ markers });
-
-    if (markers.length === 3) {
-      this.props.toast(
-        'Right click on the marker to remove it',
-        'Also check the code!'
-      );
-    }
-  }
-
-  handleMarkerRightclick(index, event) {
-    /*
-     * All you modify is data, and the view is driven by data.
-     * This is so called data-driven-development. (And yes, it's now in
-     * web front end and even with google maps API.)
-     */
-    let { markers } = this.state;
-    markers = update(markers, {
-      $splice: [
-        [index, 1],
-      ],
-    });
-    this.setState({ markers });
-  }
-
-  render() {
-    return (
-      <GoogleMapLoader
-        containerElement={
-          <div
-            {...this.props}
-            style={{
-              height: '400px',
-            }}
-          />
-        }
-        googleMapElement={
-          <GoogleMap
-            ref={(map) => (this._googleMapComponent = map) && console.log(map.getZoom())}
-            defaultZoom={3}
-            defaultCenter={{ lat: -25.363882, lng: 131.044922 }}
-            onClick={::this.handleMapClick}
-          >
-            {this.state.markers.map((marker, index) => {
-              return (
-                <Marker
-                  {...marker}
-                  onRightclick={this.handleMarkerRightclick.bind(this, index)}
-                />
-              );
-            })}
-          </GoogleMap>
-        }
-      />
-    );
-  }
+function Home({ news }) {
+  return (
+    <div className={s.root}>
+      <div className={s.container}>
+        <h1 className={s.title}>React.js News</h1>
+        <ul className={s.news}>
+          {news.map((item, index) => (
+            <li key={index} className={s.newsItem}>
+              <a href={item.link} className={s.newsTitle}>{item.title}</a>
+              <span
+                className={s.newsDesc}
+                dangerouslySetInnerHTML={{ __html: item.contentSnippet }}
+              />
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  );
 }
+
+Home.propTypes = {
+  news: PropTypes.arrayOf(PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    link: PropTypes.string.isRequired,
+    contentSnippet: PropTypes.string,
+  })).isRequired,
+};
+
+export default withStyles(Home, s);
