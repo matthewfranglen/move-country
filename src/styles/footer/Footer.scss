@@ -1,0 +1,42 @@
+@import '../variables.scss';
+
+.footer {
+  background: $gray-darker;
+  color: $gray-light;
+}
+
+.footer__container {
+  margin: 0 auto;
+  padding: 20px 15px;
+  max-width: $max-content-width;
+  text-align: center;
+}
+
+.footer__text {
+  color: $gray-light;
+}
+
+.footer__text--muted {
+  color: $gray;
+}
+
+.footer__spacer {
+  color: $gray-dark;
+}
+
+.footer__text,
+.footer__link {
+  padding: 2px 5px;
+  font-size: 1em;
+}
+
+.footer__link,
+.footer__link:active,
+.footer__link:visited {
+  color: $gray-light;
+  text-decoration: none;
+}
+
+.footer__link:hover {
+  color: $gray-lighter;
+}

@@ -1,7 +1,9 @@
 /* Base Application Styles */
+@import 'variables.scss';
+
 body {
-  color: #fff;
-  background: #222;
+  background: $gray-dark;
+  color: $gray-lighter;
 }
 
 .index img {
