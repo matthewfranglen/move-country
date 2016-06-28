@@ -1,4 +1,7 @@
+@import '../variables.scss';
+
 .leaflet-container {
   height: 400px;
   width: 100%;
+  color: $gray-darker;
 }
