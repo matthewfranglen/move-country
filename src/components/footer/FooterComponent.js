@@ -8,12 +8,6 @@ let FooterComponent = () => (
     <div className="footer">
       <div className="footer__container">
         <span className="footer__text">© Your Company</span>
-        <span className="footer__spacer">·</span>
-        <a className="footer__link" href="/">Home</a>
-        <span className="footer__spacer">·</span>
-        <a className="footer__link" href="/privacy">Privacy</a>
-        <span className="footer__spacer">·</span>
-        <a className="footer__link" href="/not-found">Not Found</a>
       </div>
     </div>
   );
