@@ -26,7 +26,7 @@ MyMarker.propTypes = {
 };
 
 class MapComponent extends React.Component {
-  render() {
+  render = () => {
     this.map = (
       <Map center={position} zoom={3} maxZoom={5}>
         <TileLayer
@@ -40,8 +40,14 @@ class MapComponent extends React.Component {
     return this.map;
   }
 
-  events (feature, layer) {
+  events = (feature, layer) => {
+    var props = this.props;
+    var callback = () => {
+      props.onCountryClick(feature.properties);
+    };
+
     layer.bindPopup(feature.properties.name);
+    layer.on('click', callback);
   }
 }
 
