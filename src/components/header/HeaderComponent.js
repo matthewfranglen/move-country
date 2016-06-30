@@ -7,7 +7,7 @@ require('styles/header/Header.scss');
 let HeaderComponent = () => (
     <div className="header">
       <div className="header__container">
-        <span className="header__text">Brexit for Remainers</span>
+        <span className="header__text">Brain Drain for Remain</span>
         <br />
         <span className="header__text"><small>England wants some time alone</small></span>
       </div>

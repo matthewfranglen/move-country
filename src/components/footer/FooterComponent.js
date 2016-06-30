@@ -7,7 +7,7 @@ require('styles/footer/Footer.scss');
 let FooterComponent = () => (
     <div className="footer">
       <div className="footer__container">
-        <span className="footer__text">© Your Company</span>
+        <span className="footer__text">© Maul</span>
       </div>
     </div>
   );
