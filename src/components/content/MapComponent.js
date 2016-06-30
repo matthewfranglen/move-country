@@ -5,14 +5,11 @@ import { GeoJson, Map, TileLayer } from 'react-leaflet';
 
 require('styles/content/Map.scss');
 
-const position = [51.505, -0.09];
-
-const style = {
-  color: '#333',
-  opacity: 0.3
-};
-
 class MapComponent extends React.Component {
+  getInitialState = () => {
+    return {layers: []};
+  }
+
   render = () => {
     var position = [this.props.x, this.props.y];
 
@@ -22,16 +19,27 @@ class MapComponent extends React.Component {
           url='http://{s}.tile.osm.org/{z}/{x}/{y}.png'
           attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
         />
-        <GeoJson data={this.props.countryBorders} style={style} onEachFeature={this.events} />
+        <GeoJson data={this.props.countryBorders} onEachFeature={this.events} />
       </Map>
     );
 
     return this.map;
   }
 
+  componentWillMount = () => {
+    this.layers = [];
+  }
+
   events = (feature, layer) => {
+    this.layers.push(layer);
     layer.bindPopup(feature.properties.name);
-    layer.on('click', () => this.props.onCountryClick(feature));
+    layer.on('click', () => this.handleClick(feature, layer));
+  }
+
+  handleClick = (feature, layer) => {
+    this.layers.forEach(l => l.setStyle({ color: '#333' }));
+    layer.setStyle({ color: '#4A4' });
+    this.props.onCountryClick(feature);
   }
 }
 
