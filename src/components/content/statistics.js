@@ -37,6 +37,13 @@ const emoji = {
   very_low: '😧'
 };
 
+const colors = {
+  high: '#81C784',
+  medium: '#AED581',
+  low: '#FFF176',
+  very_low: '#FF8A65'
+};
+
 function getTypes () {
   return Object.keys(statistics);
 }
@@ -46,18 +53,26 @@ function getDescription (type) {
 }
 
 function toEmoji (value, type) {
+  return emoji[toRank(value, type)];
+}
+
+function toColor (value, type) {
+  return colors[toRank(value, type)];
+}
+
+function toRank (value, type) {
   var ranks = statistics[type].ranks;
 
   if (value <= ranks.high) {
-    return emoji.high;
+    return 'high';
   }
   if (value <= ranks.medium) {
-    return emoji.medium;
+    return 'medium';
   }
   if (value <= ranks.low) {
-    return emoji.low;
+    return 'low';
   }
-  return emoji.very_low;
+  return 'very_low';
 }
 
-export { getTypes, getDescription, toEmoji };
+export { getTypes, getDescription, toEmoji, toColor };
