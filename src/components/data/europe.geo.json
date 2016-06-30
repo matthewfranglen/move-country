@@ -5,7 +5,8 @@
       "type": "Feature",
       "properties": {
         "name": "Albania",
-        "iso": "ALB"
+        "iso": "ALB",
+        "HDI": 85
       },
       "geometry": {
         "type": "Polygon",
@@ -107,7 +108,8 @@
       "type": "Feature",
       "properties": {
         "name": "Austria",
-        "iso": "AUT"
+        "iso": "AUT",
+        "HDI": 23
       },
       "geometry": {
         "type": "Polygon",
@@ -269,7 +271,8 @@
       "type": "Feature",
       "properties": {
         "name": "Belgium",
-        "iso": "BEL"
+        "iso": "BEL",
+        "HDI": 21
       },
       "geometry": {
         "type": "Polygon",
@@ -343,7 +346,8 @@
       "type": "Feature",
       "properties": {
         "name": "Bulgaria",
-        "iso": "BGR"
+        "iso": "BGR",
+        "HDI": 59
       },
       "geometry": {
         "type": "Polygon",
@@ -571,7 +575,8 @@
       "type": "Feature",
       "properties": {
         "name": "Belarus",
-        "iso": "BLR"
+        "iso": "BLR",
+        "HDI": 50
       },
       "geometry": {
         "type": "Polygon",
@@ -761,7 +766,8 @@
       "type": "Feature",
       "properties": {
         "name": "Switzerland",
-        "iso": "CHE"
+        "iso": "CHE",
+        "HDI": 3
       },
       "geometry": {
         "type": "Polygon",
@@ -871,7 +877,8 @@
       "type": "Feature",
       "properties": {
         "name": "Czech Rep.",
-        "iso": "CZE"
+        "iso": "CZE",
+        "HDI": 28
       },
       "geometry": {
         "type": "Polygon",
@@ -1025,7 +1032,8 @@
       "type": "Feature",
       "properties": {
         "name": "Germany",
-        "iso": "DEU"
+        "iso": "DEU",
+        "HDI": 6
       },
       "geometry": {
         "type": "Polygon",
@@ -1271,7 +1279,8 @@
       "type": "Feature",
       "properties": {
         "name": "Denmark",
-        "iso": "DNK"
+        "iso": "DNK",
+        "HDI": 4
       },
       "geometry": {
         "type": "MultiPolygon",
@@ -1387,7 +1396,8 @@
       "type": "Feature",
       "properties": {
         "name": "Spain",
-        "iso": "ESP"
+        "iso": "ESP",
+        "HDI": 26
       },
       "geometry": {
         "type": "Polygon",
@@ -1605,7 +1615,8 @@
       "type": "Feature",
       "properties": {
         "name": "Estonia",
-        "iso": "EST"
+        "iso": "EST",
+        "HDI": 30
       },
       "geometry": {
         "type": "Polygon",
@@ -1687,7 +1698,8 @@
       "type": "Feature",
       "properties": {
         "name": "Finland",
-        "iso": "FIN"
+        "iso": "FIN",
+        "HDI": 24
       },
       "geometry": {
         "type": "Polygon",
@@ -1853,7 +1865,8 @@
       "type": "Feature",
       "properties": {
         "name": "France",
-        "iso": "FRA"
+        "iso": "FRA",
+        "HDI": 22
       },
       "geometry": {
         "type": "MultiPolygon",
@@ -2173,7 +2186,8 @@
       "type": "Feature",
       "properties": {
         "name": "United Kingdom",
-        "iso": "GBR"
+        "iso": "GBR",
+        "HDI": 14
       },
       "geometry": {
         "type": "MultiPolygon",
@@ -2417,7 +2431,8 @@
       "type": "Feature",
       "properties": {
         "name": "Greece",
-        "iso": "GRC"
+        "iso": "GRC",
+        "HDI": 29
       },
       "geometry": {
         "type": "MultiPolygon",
@@ -2653,7 +2668,8 @@
       "type": "Feature",
       "properties": {
         "name": "Croatia",
-        "iso": "HRV"
+        "iso": "HRV",
+        "HDI": 47
       },
       "geometry": {
         "type": "Polygon",
@@ -2835,7 +2851,8 @@
       "type": "Feature",
       "properties": {
         "name": "Hungary",
-        "iso": "HUN"
+        "iso": "HUN",
+        "HDI": 44
       },
       "geometry": {
         "type": "Polygon",
@@ -2973,7 +2990,8 @@
       "type": "Feature",
       "properties": {
         "name": "Ireland",
-        "iso": "IRL"
+        "iso": "IRL",
+        "HDI": 6
       },
       "geometry": {
         "type": "Polygon",
@@ -3039,7 +3057,8 @@
       "type": "Feature",
       "properties": {
         "name": "Iceland",
-        "iso": "ISL"
+        "iso": "ISL",
+        "HDI": 16
       },
       "geometry": {
         "type": "Polygon",
@@ -3133,7 +3152,8 @@
       "type": "Feature",
       "properties": {
         "name": "Italy",
-        "iso": "ITA"
+        "iso": "ITA",
+        "HDI": 27
       },
       "geometry": {
         "type": "MultiPolygon",
@@ -3603,7 +3623,8 @@
       "type": "Feature",
       "properties": {
         "name": "Lithuania",
-        "iso": "LTU"
+        "iso": "LTU",
+        "HDI": 37
       },
       "geometry": {
         "type": "Polygon",
@@ -3693,7 +3714,8 @@
       "type": "Feature",
       "properties": {
         "name": "Luxembourg",
-        "iso": "LUX"
+        "iso": "LUX",
+        "HDI": 19
       },
       "geometry": {
         "type": "Polygon",
@@ -3735,7 +3757,8 @@
       "type": "Feature",
       "properties": {
         "name": "Latvia",
-        "iso": "LVA"
+        "iso": "LVA",
+        "HDI": 46
       },
       "geometry": {
         "type": "Polygon",
@@ -3837,7 +3860,8 @@
       "type": "Feature",
       "properties": {
         "name": "Moldova",
-        "iso": "MDA"
+        "iso": "MDA",
+        "HDI": 107
       },
       "geometry": {
         "type": "Polygon",
@@ -3959,7 +3983,8 @@
       "type": "Feature",
       "properties": {
         "name": "Macedonia",
-        "iso": "MKD"
+        "iso": "MKD",
+        "HDI": 81
       },
       "geometry": {
         "type": "Polygon",
@@ -4041,7 +4066,8 @@
       "type": "Feature",
       "properties": {
         "name": "Montenegro",
-        "iso": "MNE"
+        "iso": "MNE",
+        "HDI": 49
       },
       "geometry": {
         "type": "Polygon",
@@ -4127,7 +4153,8 @@
       "type": "Feature",
       "properties": {
         "name": "Netherlands",
-        "iso": "NLD"
+        "iso": "NLD",
+        "HDI": 5
       },
       "geometry": {
         "type": "Polygon",
@@ -4197,7 +4224,8 @@
       "type": "Feature",
       "properties": {
         "name": "Norway",
-        "iso": "NOR"
+        "iso": "NOR",
+        "HDI": 1
       },
       "geometry": {
         "type": "MultiPolygon",
@@ -4577,7 +4605,8 @@
       "type": "Feature",
       "properties": {
         "name": "Poland",
-        "iso": "POL"
+        "iso": "POL",
+        "HDI": 36
       },
       "geometry": {
         "type": "Polygon",
@@ -4771,7 +4800,8 @@
       "type": "Feature",
       "properties": {
         "name": "Portugal",
-        "iso": "PRT"
+        "iso": "PRT",
+        "HDI": 43
       },
       "geometry": {
         "type": "Polygon",
@@ -4917,7 +4947,8 @@
       "type": "Feature",
       "properties": {
         "name": "Romania",
-        "iso": "ROU"
+        "iso": "ROU",
+        "HDI": 52
       },
       "geometry": {
         "type": "Polygon",
@@ -5107,7 +5138,8 @@
       "type": "Feature",
       "properties": {
         "name": "Russia",
-        "iso": "RUS"
+        "iso": "RUS",
+        "HDI": 50
       },
       "geometry": {
         "type": "MultiPolygon",
@@ -7563,7 +7595,8 @@
       "type": "Feature",
       "properties": {
         "name": "Serbia",
-        "iso": "SRB"
+        "iso": "SRB",
+        "HDI": 66
       },
       "geometry": {
         "type": "Polygon",
@@ -7761,7 +7794,8 @@
       "type": "Feature",
       "properties": {
         "name": "Slovakia",
-        "iso": "SVK"
+        "iso": "SVK",
+        "HDI": 35
       },
       "geometry": {
         "type": "Polygon",
@@ -7907,7 +7941,8 @@
       "type": "Feature",
       "properties": {
         "name": "Slovenia",
-        "iso": "SVN"
+        "iso": "SVN",
+        "HDI": 25
       },
       "geometry": {
         "type": "Polygon",
@@ -7993,7 +8028,8 @@
       "type": "Feature",
       "properties": {
         "name": "Sweden",
-        "iso": "SWE"
+        "iso": "SWE",
+        "HDI": 14
       },
       "geometry": {
         "type": "Polygon",
@@ -8167,7 +8203,8 @@
       "type": "Feature",
       "properties": {
         "name": "Ukraine",
-        "iso": "UKR"
+        "iso": "UKR",
+        "HDI": 81
       },
       "geometry": {
         "type": "Polygon",
