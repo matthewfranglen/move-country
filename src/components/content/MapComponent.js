@@ -1,8 +1,7 @@
 'use strict';
 
 import React from 'react';
-import { GeoJson, Map, Marker, Popup, TileLayer, PropTypes as MapPropTypes } from 'react-leaflet';
-import countryBorders from 'json!./europe.geo.json';
+import { GeoJson, Map, TileLayer } from 'react-leaflet';
 
 require('styles/content/Map.scss');
 
@@ -13,27 +12,17 @@ const style = {
   opacity: 0.3
 };
 
-const MyMarker = ({ children, position }) => (
-  <Marker position={position}>
-    <Popup>
-      <span>{children}</span>
-    </Popup>
-  </Marker>
-);
-MyMarker.propTypes = {
-  children: MapPropTypes.children,
-  position: MapPropTypes.latlng
-};
-
 class MapComponent extends React.Component {
   render = () => {
+    var position = [this.props.x, this.props.y];
+
     this.map = (
-      <Map center={position} zoom={3} maxZoom={5}>
+      <Map center={position} zoom={this.props.zoom} maxZoom={this.props.maxZoom}>
         <TileLayer
           url='http://{s}.tile.osm.org/{z}/{x}/{y}.png'
           attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
         />
-        <GeoJson data={countryBorders} style={style} onEachFeature={this.events} />
+        <GeoJson data={this.props.countryBorders} style={style} onEachFeature={this.events} />
       </Map>
     );
 
@@ -41,13 +30,8 @@ class MapComponent extends React.Component {
   }
 
   events = (feature, layer) => {
-    var props = this.props;
-    var callback = () => {
-      props.onCountryClick(feature.properties);
-    };
-
     layer.bindPopup(feature.properties.name);
-    layer.on('click', callback);
+    layer.on('click', () => this.props.onCountryClick(feature));
   }
 }
 

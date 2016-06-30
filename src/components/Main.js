@@ -7,11 +7,12 @@ import FooterComponent from './footer/FooterComponent';
 import MapComponent from './content/MapComponent';
 import StatisticsComponent from './content/StatisticsComponent';
 
+import countryBorders from 'json!./data/europe.geo.json';
+
 var AppComponent = React.createClass({
   getInitialState: function() {
     return {
-      visible: false,
-      name: 'No Country'
+      feature: undefined
     };
   },
 
@@ -19,22 +20,18 @@ var AppComponent = React.createClass({
     return (
       <div className="index">
         <HeaderComponent />
-        <MapComponent onCountryClick={this.setCountry}/>
-        <StatisticsComponent visible={this.state.visible} name={this.state.name}/>
+        <MapComponent x={51.505} y={-0.09} zoom={3} maxZoom={6} countryBorders={countryBorders} onCountryClick={this.setCountry} />
+        <StatisticsComponent visible={this.state.feature !== undefined} feature={this.state.feature}/>
         <FooterComponent />
       </div>
     );
   },
 
-  setCountry: function (details) {
+  setCountry: function (feature) {
     this.setState({
-      visible: true,
-      name: details.name
+      feature: feature
     });
   }
 });
-
-AppComponent.defaultProps = {
-};
 
 export default AppComponent;

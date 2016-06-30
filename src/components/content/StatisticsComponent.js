@@ -6,13 +6,13 @@ require('styles/content/Statistics.scss');
 
 const StatisticsComponent = React.createClass({
   render: function() {
-    if (! this.props.visible) {
+    if (! this.props.feature) {
       return null;
     }
 
     return (
       <div className="statistics-component">
-        {this.props.name}
+        {this.props.feature.properties.name}
       </div>
     );
   }
