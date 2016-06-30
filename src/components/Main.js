@@ -27,7 +27,10 @@ var AppComponent = React.createClass({
     );
   },
 
-  setCountry: function (feature) {
+  setCountry: function (feature, layer, layers) {
+    layers.forEach(l => l.setStyle({ color: '#333' }));
+    layer.setStyle({ color: '#4A4' });
+
     this.setState({
       feature: feature
     });
