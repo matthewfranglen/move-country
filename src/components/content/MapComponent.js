@@ -27,6 +27,8 @@ class MapComponent extends React.Component {
 
   events = (feature, layer) => {
     this.layers.push(layer);
+
+    layer.setStyle({ color: '#333' });
     layer.bindPopup(feature.properties.name);
     layer.on('click', () => this.handleClick(feature, layer));
   }
