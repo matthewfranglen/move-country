@@ -13,7 +13,7 @@ class MapComponent extends React.Component {
   componentWillMount = () => {
     var position = [this.props.x, this.props.y];
 
-    this.layers = [];
+    this.data = [];
     this.map = (
       <Map center={position} zoom={this.props.zoom} maxZoom={this.props.maxZoom}>
         <TileLayer
@@ -26,7 +26,10 @@ class MapComponent extends React.Component {
   }
 
   events = (feature, layer) => {
-    this.layers.push(layer);
+    this.data.push({
+        feature: feature,
+        layer: layer
+      });
 
     layer.setStyle({ color: '#333' });
     layer.bindPopup(feature.properties.name);
@@ -34,7 +37,7 @@ class MapComponent extends React.Component {
   }
 
   handleClick = (feature, layer) => {
-    this.props.onCountryClick(feature, layer, this.layers);
+    this.props.onCountryClick(feature, layer, this.data);
   }
 }
 

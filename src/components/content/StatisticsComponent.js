@@ -12,9 +12,10 @@ class StatisticsComponent extends React.Component {
     var makeResult = (type) => {
       var description = getDescription(type);
       var value = toEmoji(feature[type], type);
+      var click = this.props.onStatisticClick;
 
       return (
-        <ResultComponent name={description.name} value={value} citation={description.citation} />
+        <ResultComponent key={description.name} type={type} name={description.name} value={value} citation={description.citation} onStatisticClick={click} />
       );
     };
     var feature = this.props.feature.properties;
@@ -33,19 +34,25 @@ class StatisticsComponent extends React.Component {
       </div>
     );
   }
+
 }
 
 class ResultComponent extends React.Component {
 
-  render() {
+  render = () => {
     return (
-      <div key={this.props.name} className="statistics__result">
+      <div className="statistics__result">
         <div className="statistics__label">{this.props.name}</div>
-        <div className="statistics__value">{this.props.value}</div>
+        <a onClick={this.onClick} className="statistics__value">{this.props.value}</a>
         <a href={this.props.citation} className="statistics__citation">[source]</a>
       </div>
     );
   }
+
+  onClick = () => {
+    this.props.onStatisticClick(this.props.type);
+  }
+
 }
 
 StatisticsComponent.displayName = 'ContentStatisticsComponent';
