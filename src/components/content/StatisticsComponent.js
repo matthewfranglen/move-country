@@ -3,25 +3,21 @@
 import React from 'react';
 import { getTypes, getDescription, toEmoji } from './statistics';
 
-const StatisticsComponent = React.createClass({
-  render: function() {
+class StatisticsComponent extends React.Component {
+  render = () => {
     if (! this.props.feature) {
       return null;
     }
 
-    var feature = this.props.feature.properties;
     var makeResult = (type) => {
       var description = getDescription(type);
       var value = toEmoji(feature[type], type);
 
       return (
-        <div key={description.name} className="statistics__result">
-          <div className="statistics__label">{description.name}</div>
-          <div className="statistics__value">{value}</div>
-          <a href={description.citation} className="statistics__citation">[source]</a>
-        </div>
+        <ResultComponent name={description.name} value={value} citation={description.citation} />
       );
     };
+    var feature = this.props.feature.properties;
     var results = getTypes()
       .filter(t => t in feature)
       .map(makeResult);
@@ -37,7 +33,20 @@ const StatisticsComponent = React.createClass({
       </div>
     );
   }
-});
+}
+
+class ResultComponent extends React.Component {
+
+  render() {
+    return (
+      <div key={this.props.name} className="statistics__result">
+        <div className="statistics__label">{this.props.name}</div>
+        <div className="statistics__value">{this.props.value}</div>
+        <a href={this.props.citation} className="statistics__citation">[source]</a>
+      </div>
+    );
+  }
+}
 
 StatisticsComponent.displayName = 'ContentStatisticsComponent';
 
