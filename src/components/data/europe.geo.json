@@ -6,7 +6,8 @@
       "properties": {
         "name": "Albania",
         "iso": "ALB",
-        "HDI": 85
+        "HDI": 85,
+        "PPI": 18.79
       },
       "geometry": {
         "type": "Polygon",
@@ -109,7 +110,8 @@
       "properties": {
         "name": "Austria",
         "iso": "AUT",
-        "HDI": 23
+        "HDI": 23,
+        "PPI": 10.67
       },
       "geometry": {
         "type": "Polygon",
@@ -272,7 +274,8 @@
       "properties": {
         "name": "Belgium",
         "iso": "BEL",
-        "HDI": 21
+        "HDI": 21,
+        "PPI": 6.995
       },
       "geometry": {
         "type": "Polygon",
@@ -347,7 +350,8 @@
       "properties": {
         "name": "Bulgaria",
         "iso": "BGR",
-        "HDI": 59
+        "HDI": 59,
+        "PPI": 8.68
       },
       "geometry": {
         "type": "Polygon",
@@ -473,7 +477,8 @@
       "type": "Feature",
       "properties": {
         "name": "Bosnia and Herz.",
-        "iso": "BIH"
+        "iso": "BIH",
+        "PPI": 12.395
       },
       "geometry": {
         "type": "Polygon",
@@ -576,7 +581,8 @@
       "properties": {
         "name": "Belarus",
         "iso": "BLR",
-        "HDI": 50
+        "HDI": 50,
+        "PPI": 22.13
       },
       "geometry": {
         "type": "Polygon",
@@ -767,7 +773,8 @@
       "properties": {
         "name": "Switzerland",
         "iso": "CHE",
-        "HDI": 3
+        "HDI": 3,
+        "PPI": 9.523333
       },
       "geometry": {
         "type": "Polygon",
@@ -878,7 +885,8 @@
       "properties": {
         "name": "Czech Rep.",
         "iso": "CZE",
-        "HDI": 28
+        "HDI": 28,
+        "PPI": 11.225
       },
       "geometry": {
         "type": "Polygon",
@@ -1033,7 +1041,8 @@
       "properties": {
         "name": "Germany",
         "iso": "DEU",
-        "HDI": 6
+        "HDI": 6,
+        "PPI": 8.584
       },
       "geometry": {
         "type": "Polygon",
@@ -1280,7 +1289,8 @@
       "properties": {
         "name": "Denmark",
         "iso": "DNK",
-        "HDI": 4
+        "HDI": 4,
+        "PPI": 7.68
       },
       "geometry": {
         "type": "MultiPolygon",
@@ -1397,7 +1407,8 @@
       "properties": {
         "name": "Spain",
         "iso": "ESP",
-        "HDI": 26
+        "HDI": 26,
+        "PPI": 9.106
       },
       "geometry": {
         "type": "Polygon",
@@ -1616,7 +1627,8 @@
       "properties": {
         "name": "Estonia",
         "iso": "EST",
-        "HDI": 30
+        "HDI": 30,
+        "PPI": 11.38
       },
       "geometry": {
         "type": "Polygon",
@@ -1699,7 +1711,8 @@
       "properties": {
         "name": "Finland",
         "iso": "FIN",
-        "HDI": 24
+        "HDI": 24,
+        "PPI": 8.48
       },
       "geometry": {
         "type": "Polygon",
@@ -1866,7 +1879,8 @@
       "properties": {
         "name": "France",
         "iso": "FRA",
-        "HDI": 22
+        "HDI": 22,
+        "PPI": 13.455
       },
       "geometry": {
         "type": "MultiPolygon",
@@ -2187,7 +2201,8 @@
       "properties": {
         "name": "United Kingdom",
         "iso": "GBR",
-        "HDI": 14
+        "HDI": 14,
+        "PPI": 12.236667
       },
       "geometry": {
         "type": "MultiPolygon",
@@ -2432,7 +2447,8 @@
       "properties": {
         "name": "Greece",
         "iso": "GRC",
-        "HDI": 29
+        "HDI": 29,
+        "PPI": 6.996667
       },
       "geometry": {
         "type": "MultiPolygon",
@@ -2669,7 +2685,8 @@
       "properties": {
         "name": "Croatia",
         "iso": "HRV",
-        "HDI": 47
+        "HDI": 47,
+        "PPI": 12.4975
       },
       "geometry": {
         "type": "Polygon",
@@ -2852,7 +2869,8 @@
       "properties": {
         "name": "Hungary",
         "iso": "HUN",
-        "HDI": 44
+        "HDI": 44,
+        "PPI": 10.1
       },
       "geometry": {
         "type": "Polygon",
@@ -2991,7 +3009,8 @@
       "properties": {
         "name": "Ireland",
         "iso": "IRL",
-        "HDI": 6
+        "HDI": 6,
+        "PPI": 9.86
       },
       "geometry": {
         "type": "Polygon",
@@ -3058,7 +3077,8 @@
       "properties": {
         "name": "Iceland",
         "iso": "ISL",
-        "HDI": 16
+        "HDI": 16,
+        "PPI": 5.69
       },
       "geometry": {
         "type": "Polygon",
@@ -3153,7 +3173,8 @@
       "properties": {
         "name": "Italy",
         "iso": "ITA",
-        "HDI": 27
+        "HDI": 27,
+        "PPI": 12.633333
       },
       "geometry": {
         "type": "MultiPolygon",
@@ -3525,7 +3546,8 @@
       "type": "Feature",
       "properties": {
         "name": "Kosovo",
-        "iso": "-99"
+        "iso": "-99",
+        "PPI": 12.56
       },
       "geometry": {
         "type": "Polygon",
@@ -3624,7 +3646,8 @@
       "properties": {
         "name": "Lithuania",
         "iso": "LTU",
-        "HDI": 37
+        "HDI": 37,
+        "PPI": 13.16
       },
       "geometry": {
         "type": "Polygon",
@@ -3715,7 +3738,8 @@
       "properties": {
         "name": "Luxembourg",
         "iso": "LUX",
-        "HDI": 19
+        "HDI": 19,
+        "PPI": 9.01
       },
       "geometry": {
         "type": "Polygon",
@@ -3758,7 +3782,8 @@
       "properties": {
         "name": "Latvia",
         "iso": "LVA",
-        "HDI": 46
+        "HDI": 46,
+        "PPI": 11.2
       },
       "geometry": {
         "type": "Polygon",
@@ -3861,7 +3886,8 @@
       "properties": {
         "name": "Moldova",
         "iso": "MDA",
-        "HDI": 107
+        "HDI": 107,
+        "PPI": 18.68
       },
       "geometry": {
         "type": "Polygon",
@@ -3984,7 +4010,8 @@
       "properties": {
         "name": "Macedonia",
         "iso": "MKD",
-        "HDI": 81
+        "HDI": 81,
+        "PPI": 14.375
       },
       "geometry": {
         "type": "Polygon",
@@ -4067,7 +4094,8 @@
       "properties": {
         "name": "Montenegro",
         "iso": "MNE",
-        "HDI": 49
+        "HDI": 49,
+        "PPI": 15.31
       },
       "geometry": {
         "type": "Polygon",
@@ -4154,7 +4182,8 @@
       "properties": {
         "name": "Netherlands",
         "iso": "NLD",
-        "HDI": 5
+        "HDI": 5,
+        "PPI": 8.82
       },
       "geometry": {
         "type": "Polygon",
@@ -4225,7 +4254,8 @@
       "properties": {
         "name": "Norway",
         "iso": "NOR",
-        "HDI": 1
+        "HDI": 1,
+        "PPI": 8.0275
       },
       "geometry": {
         "type": "MultiPolygon",
@@ -4606,7 +4636,8 @@
       "properties": {
         "name": "Poland",
         "iso": "POL",
-        "HDI": 36
+        "HDI": 36,
+        "PPI": 10.435
       },
       "geometry": {
         "type": "Polygon",
@@ -4801,7 +4832,8 @@
       "properties": {
         "name": "Portugal",
         "iso": "PRT",
-        "HDI": 43
+        "HDI": 43,
+        "PPI": 9.895
       },
       "geometry": {
         "type": "Polygon",
@@ -4948,7 +4980,8 @@
       "properties": {
         "name": "Romania",
         "iso": "ROU",
-        "HDI": 52
+        "HDI": 52,
+        "PPI": 11.331429
       },
       "geometry": {
         "type": "Polygon",
@@ -5139,7 +5172,8 @@
       "properties": {
         "name": "Russia",
         "iso": "RUS",
-        "HDI": 50
+        "HDI": 50,
+        "PPI": 16.793333
       },
       "geometry": {
         "type": "MultiPolygon",
@@ -7596,7 +7630,8 @@
       "properties": {
         "name": "Serbia",
         "iso": "SRB",
-        "HDI": 66
+        "HDI": 66,
+        "PPI": 16.645
       },
       "geometry": {
         "type": "Polygon",
@@ -7795,7 +7830,8 @@
       "properties": {
         "name": "Slovakia",
         "iso": "SVK",
-        "HDI": 35
+        "HDI": 35,
+        "PPI": 10.595
       },
       "geometry": {
         "type": "Polygon",
@@ -8029,7 +8065,8 @@
       "properties": {
         "name": "Sweden",
         "iso": "SWE",
-        "HDI": 14
+        "HDI": 14,
+        "PPI": 9.88
       },
       "geometry": {
         "type": "Polygon",
@@ -8204,7 +8241,8 @@
       "properties": {
         "name": "Ukraine",
         "iso": "UKR",
-        "HDI": 81
+        "HDI": 81,
+        "PPI": 27.2725
       },
       "geometry": {
         "type": "Polygon",
