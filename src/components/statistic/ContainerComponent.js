@@ -10,6 +10,10 @@ class StatisticContainerComponent extends React.Component {
 
   static displayName = 'StatisticContainerComponent';
 
+  static propTypes = {
+    feature: React.PropTypes.object
+  };
+
   constructor(props) {
     super(props);
   }
