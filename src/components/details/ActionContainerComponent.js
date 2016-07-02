@@ -1,6 +1,7 @@
 'use strict';
 
 import React from 'react';
+import AirbnbComponent from './actions/AirbnbComponent';
 
 require('styles/details/ActionContainer.scss');
 
@@ -15,7 +16,7 @@ class ActionContainerComponent extends React.Component {
   render() {
     return (
       <div className="action-container-component">
-        Please edit src/components/details//ActionContainerComponent.js to update this component!
+        <AirbnbComponent feature={this.props.feature} />
       </div>
     );
   }
