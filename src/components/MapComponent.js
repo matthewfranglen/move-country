@@ -14,8 +14,8 @@ class MapComponent extends React.Component {
     y: React.PropTypes.number,
     zoom: React.PropTypes.number,
     maxZoom: React.PropTypes.number,
-    countryBorders: React.PropTypes.object,
-    onCountryClick: React.PropTypes.func
+    geoData: React.PropTypes.object,
+    onClick: React.PropTypes.func
   }
 
   constructor(props) {
@@ -36,7 +36,7 @@ class MapComponent extends React.Component {
           url='http://{s}.tile.osm.org/{z}/{x}/{y}.png'
           attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
         />
-        <GeoJson data={this.props.countryBorders} onEachFeature={this.events} />
+        <GeoJson data={this.props.geoData} onEachFeature={this.events} />
       </Map>
     );
   }
@@ -57,7 +57,7 @@ class MapComponent extends React.Component {
   }
 
   handleClick(feature, layer) {
-    this.props.onCountryClick(feature, layer, this.data);
+    this.props.onClick(feature, layer, this.data);
   }
 
 }
