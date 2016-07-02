@@ -8,7 +8,7 @@ import MapComponent from './content/MapComponent';
 import StatisticContainerComponent from './content/StatisticContainerComponent';
 import { toColor } from './content/statistics';
 
-import countryBorders from 'json!./data/europe.geo.json';
+import countryBorders from 'json!../data/europe.geo.json';
 
 class AppComponent extends React.Component {
 
