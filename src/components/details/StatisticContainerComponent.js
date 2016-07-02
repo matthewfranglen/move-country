@@ -29,7 +29,12 @@ class StatisticContainerComponent extends React.Component {
 
     return (
       <div className="statistic-container-component">
-        {results}
+        <div className="statistic-container-component__title">
+          is {feature.name} any good?
+        </div>
+        <div className="statistic-container-component__content">
+          {results}
+        </div>
       </div>
     );
   }

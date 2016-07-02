@@ -16,7 +16,12 @@ class ActionContainerComponent extends React.Component {
   render() {
     return (
       <div className="action-container-component">
-        <AirbnbComponent feature={this.props.feature} />
+        <div className="action-container-component__title">
+          check out {this.props.feature.name}
+        </div>
+        <div className="action-container-component__content">
+          <AirbnbComponent feature={this.props.feature} />
+        </div>
       </div>
     );
   }
