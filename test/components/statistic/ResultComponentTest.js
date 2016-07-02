@@ -13,7 +13,7 @@ describe('StatisticResultComponent', () => {
   let component;
 
   beforeEach(() => {
-    component = createComponent(StatisticResultComponent);
+    component = createComponent(StatisticResultComponent, { type: 'HDI', feature: { HDI: 1 } });
   });
 
   it('should have its component name as default className', () => {

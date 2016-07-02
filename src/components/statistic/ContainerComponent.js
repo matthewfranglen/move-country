@@ -2,7 +2,7 @@
 
 import React from 'react';
 import StatisticResultComponent from './ResultComponent';
-import { getTypes, getDescription, toEmoji } from '../../lib/statistics';
+import { getTypes } from '../../lib/statistics';
 
 require('styles/statistic/Container.scss');
 
@@ -22,12 +22,8 @@ class StatisticContainerComponent extends React.Component {
     }
 
     var makeResult = (type) => {
-      var description = getDescription(type);
-      var value = toEmoji(feature[type], type);
-      var click = this.props.onStatisticClick;
-
       return (
-        <StatisticResultComponent key={description.name} type={type} name={description.name} value={value} citation={description.citation} onStatisticClick={click} />
+        <StatisticResultComponent key={type} type={type} feature={this.props.feature} onClick={this.props.onStatisticClick} />
       );
     };
     var feature = this.props.feature.properties;
