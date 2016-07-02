@@ -7,6 +7,8 @@ require('styles/Map.scss');
 
 class MapComponent extends React.Component {
 
+  static displayName = 'MapComponent';
+
   static propTypes = {
     x: React.PropTypes.number,
     y: React.PropTypes.number,
@@ -15,8 +17,6 @@ class MapComponent extends React.Component {
     countryBorders: React.PropTypes.object,
     onCountryClick: React.PropTypes.func
   }
-
-  static displayName = 'MapComponent';
 
   constructor(props) {
     super(props);
