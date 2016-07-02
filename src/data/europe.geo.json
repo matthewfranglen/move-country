@@ -476,7 +476,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Bosnia and Herz.",
+        "name": "Bosnia and Herzegovina",
         "iso": "BIH",
         "PPI": 12.395
       },
@@ -883,7 +883,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Czech Rep.",
+        "name": "Czech Republic",
         "iso": "CZE",
         "HDI": 28,
         "PPI": 11.225
