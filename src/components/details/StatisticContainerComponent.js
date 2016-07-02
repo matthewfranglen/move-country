@@ -1,10 +1,10 @@
 'use strict';
 
 import React from 'react';
-import StatisticResultComponent from './ResultComponent';
+import StatisticComponent from './StatisticComponent';
 import { getTypes } from '../../lib/statistics';
 
-require('styles/statistic/Container.scss');
+require('styles/details/StatisticContainer.scss');
 
 class StatisticContainerComponent extends React.Component {
 
@@ -20,23 +20,17 @@ class StatisticContainerComponent extends React.Component {
   }
 
   render() {
-    if (! this.props.feature) {
-      return (
-        <div className="statistic-container-component"></div>
-      );
-    }
-
-    var feature = this.props.feature.properties;
+    var feature = this.props.feature;
     var results = getTypes()
       .filter(type => type in feature)
       .map(type => (
-          <StatisticResultComponent key={type + '-' + feature[type]} type={type} feature={feature} onClick={this.props.onClick} />
+          <StatisticComponent key={type + '-' + feature[type]} type={type} feature={feature} onClick={this.props.onClick} />
         ));
 
     return (
       <div className="statistic-container-component">
         <div className="statistic-container-component__title">
-          {this.props.feature.properties.name}
+          is {feature.name} any good?
         </div>
         <div className="statistic-container-component__content">
           {results}
