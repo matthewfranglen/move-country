@@ -3,10 +3,11 @@
 import React from 'react';
 import { GeoJson, Map, TileLayer } from 'react-leaflet';
 
-require('styles/content/Map.scss');
+require('styles/Map.scss');
 
 class MapComponent extends React.Component {
-  propTypes = {
+
+  static propTypes = {
     x: React.PropTypes.number,
     y: React.PropTypes.number,
     zoom: React.PropTypes.number,
@@ -15,12 +16,22 @@ class MapComponent extends React.Component {
     onCountryClick: React.PropTypes.func
   }
 
-  componentWillMount = () => {
-    var position = [this.props.x, this.props.y];
+  static displayName = 'MapComponent';
+
+  constructor(props) {
+    super(props);
 
     this.data = [];
+
+    this.events = this.events.bind(this);
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  componentWillMount() {
+    var position = [this.props.x, this.props.y];
+
     this.map = (
-      <Map center={position} zoom={this.props.zoom} maxZoom={this.props.maxZoom}>
+      <Map className="map-component" center={position} zoom={this.props.zoom} maxZoom={this.props.maxZoom}>
         <TileLayer
           url='http://{s}.tile.osm.org/{z}/{x}/{y}.png'
           attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
@@ -30,11 +41,11 @@ class MapComponent extends React.Component {
     );
   }
 
-  render = () => {
+  render() {
     return this.map;
   }
 
-  events = (feature, layer) => {
+  events(feature, layer) {
     this.data.push({
         feature: feature,
         layer: layer
@@ -45,11 +56,10 @@ class MapComponent extends React.Component {
     layer.on('click', () => this.handleClick(feature, layer));
   }
 
-  handleClick = (feature, layer) => {
+  handleClick(feature, layer) {
     this.props.onCountryClick(feature, layer, this.data);
   }
-}
 
-MapComponent.displayName = 'ContentMapComponent';
+}
 
 export default MapComponent;
