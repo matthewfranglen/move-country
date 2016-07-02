@@ -1,10 +1,10 @@
 'use strict';
 
 import React from 'react';
-import StatisticResultComponent from './ResultComponent';
+import StatisticComponent from './StatisticComponent';
 import { getTypes } from '../../lib/statistics';
 
-require('styles/statistic/Container.scss');
+require('styles/details/StatisticContainer.scss');
 
 class StatisticContainerComponent extends React.Component {
 
@@ -30,7 +30,7 @@ class StatisticContainerComponent extends React.Component {
     var results = getTypes()
       .filter(type => type in feature)
       .map(type => (
-          <StatisticResultComponent key={type + '-' + feature[type]} type={type} feature={feature} onClick={this.props.onClick} />
+          <StatisticComponent key={type + '-' + feature[type]} type={type} feature={feature} onClick={this.props.onClick} />
         ));
 
     return (

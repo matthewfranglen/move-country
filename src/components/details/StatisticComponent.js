@@ -3,11 +3,11 @@
 import React from 'react';
 import { getDescription, toEmoji } from '../../lib/statistics';
 
-require('styles/statistic/Result.scss');
+require('styles/details/Statistic.scss');
 
-class StatisticResultComponent extends React.Component {
+class StatisticComponent extends React.Component {
 
-  static displayName = 'StatisticResultComponent';
+  static displayName = 'StatisticComponent';
 
   static propTypes = {
     type: React.PropTypes.string,
@@ -31,10 +31,10 @@ class StatisticResultComponent extends React.Component {
 
   render() {
     return (
-      <div className="statistic-result-component">
-        <div className="statistic-result-component__label">{this.state.name}</div>
-        <a onClick={this.onClick} className="statistic-result-component__value">{this.state.value}</a>
-        <a href={this.state.citation} className="statistic-result-component__citation">[source]</a>
+      <div className="statistic-component">
+        <div className="statistic-component__label">{this.state.name}</div>
+        <a onClick={this.onClick} className="statistic-component__value">{this.state.value}</a>
+        <a href={this.state.citation} className="statistic-component__citation">[source]</a>
       </div>
     );
   }
@@ -45,4 +45,4 @@ class StatisticResultComponent extends React.Component {
 
 }
 
-export default StatisticResultComponent;
+export default StatisticComponent;

@@ -5,7 +5,7 @@ import React from 'react';
 import HeaderComponent from './HeaderComponent';
 import FooterComponent from './FooterComponent';
 import MapComponent from './MapComponent';
-import StatisticContainerComponent from './statistic/ContainerComponent';
+import StatisticContainerComponent from './details/StatisticContainerComponent';
 import { toColor } from '../lib/statistics';
 
 import geoData from 'json!../data/europe.geo.json';
