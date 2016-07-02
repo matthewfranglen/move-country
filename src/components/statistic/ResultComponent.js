@@ -9,6 +9,9 @@ class StatisticResultComponent extends React.Component {
   static displayName = 'StatisticResultComponent';
 
   static propTypes = {
+    name: React.PropTypes.string,
+    value: React.PropTypes.string,
+    citation: React.PropTypes.string,
     onClick: React.PropTypes.func
   };
 
