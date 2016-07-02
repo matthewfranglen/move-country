@@ -39,9 +39,9 @@ const emoji = {
 
 const colors = {
   high: '#81C784',
-  medium: '#AED581',
-  low: '#FFF176',
-  very_low: '#FF8A65'
+  medium: '#FFF176',
+  low: '#FF8A65',
+  very_low: '#E57373'
 };
 
 function getTypes () {
