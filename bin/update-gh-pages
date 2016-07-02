@@ -1,0 +1,35 @@
+#!/bin/bash
+
+set -euo pipefail
+
+COMMAND=`readlink -f "${BASH_SOURCE}"`
+BIN_FOLDER=`dirname "${COMMAND}"`
+ROOT_FOLDER=`dirname "${BIN_FOLDER}"`
+
+cd "${ROOT_FOLDER}"
+
+main () {
+  build
+
+  git checkout gh-pages
+  install
+  commit
+  git checkout -
+}
+
+build () {
+  npm run dist
+}
+
+install () {
+  [ -e assets ] && rm -r assets
+  mv dist/* .
+  rmdir dist
+}
+
+commit () {
+  git add assets favicon.ico index.html
+  git commit -m 'Update gh-pages'
+}
+
+main
