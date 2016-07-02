@@ -1,0 +1,13 @@
+.details-component {
+}
+
+.details-component__title {
+  text-align: center;
+  padding: 16px;
+}
+
+.details-component__content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}

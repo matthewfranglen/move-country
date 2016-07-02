@@ -20,12 +20,6 @@ class StatisticContainerComponent extends React.Component {
   }
 
   render() {
-    if (! this.props.feature) {
-      return (
-        <div className="statistic-container-component"></div>
-      );
-    }
-
     var feature = this.props.feature.properties;
     var results = getTypes()
       .filter(type => type in feature)
@@ -35,12 +29,7 @@ class StatisticContainerComponent extends React.Component {
 
     return (
       <div className="statistic-container-component">
-        <div className="statistic-container-component__title">
-          {this.props.feature.properties.name}
-        </div>
-        <div className="statistic-container-component__content">
-          {results}
-        </div>
+        {results}
       </div>
     );
   }

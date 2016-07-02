@@ -7,16 +7,16 @@
 // import TestUtils from 'react-addons-test-utils';
 import createComponent from 'helpers/shallowRenderHelper';
 
-import StatisticContainerComponent from 'components/details/StatisticContainerComponent.js';
+import ActionContainerComponent from 'components/details/ActionContainerComponent.js';
 
-describe('StatisticContainerComponent', () => {
+describe('ActionContainerComponent', () => {
   let component;
 
   beforeEach(() => {
-    component = createComponent(StatisticContainerComponent, { feature: { properties: { name: 'Germany' } } });
+    component = createComponent(ActionContainerComponent);
   });
 
   it('should have its component name as default className', () => {
-    expect(component.props.className).to.equal('statistic-container-component');
+    expect(component.props.className).to.equal('action-container-component');
   });
 });
