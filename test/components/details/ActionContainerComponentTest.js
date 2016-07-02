@@ -13,7 +13,7 @@ describe('ActionContainerComponent', () => {
   let component;
 
   beforeEach(() => {
-    component = createComponent(ActionContainerComponent);
+    component = createComponent(ActionContainerComponent, { feature: { name: 'Germany' } });
   });
 
   it('should have its component name as default className', () => {
