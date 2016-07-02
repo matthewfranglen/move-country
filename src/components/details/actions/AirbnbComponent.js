@@ -20,7 +20,7 @@ class AirbnbComponent extends React.Component {
 
     return (
       <div className="airbnb-component">
-        <a href={url}>
+        <a target="_blank" href={url}>
           <img src={airbnbLogo} alt={'Airbnb for ' + this.props.feature.name} />
         </a>
       </div>
