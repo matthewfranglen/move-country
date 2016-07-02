@@ -29,7 +29,7 @@ class AppComponent extends React.Component {
       <div className="index">
         <HeaderComponent />
         <MapComponent x={51.505} y={-0.09} zoom={3} maxZoom={6} countryBorders={countryBorders} onCountryClick={this.setCountry} />
-        <StatisticContainerComponent visible={this.state.feature !== undefined} feature={this.state.feature} onStatisticClick={this.setStatistic} />
+        <StatisticContainerComponent visible={this.state.feature !== undefined} feature={this.state.feature} onClick={this.setStatistic} />
         <FooterComponent />
       </div>
     );
