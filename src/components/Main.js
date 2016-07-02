@@ -8,7 +8,7 @@ import MapComponent from './MapComponent';
 import StatisticContainerComponent from './statistic/ContainerComponent';
 import { toColor } from '../lib/statistics';
 
-import countryBorders from 'json!../data/europe.geo.json';
+import geoData from 'json!../data/europe.geo.json';
 
 class AppComponent extends React.Component {
 
@@ -28,8 +28,8 @@ class AppComponent extends React.Component {
     return (
       <div className="index">
         <HeaderComponent />
-        <MapComponent x={51.505} y={-0.09} zoom={3} maxZoom={6} countryBorders={countryBorders} onCountryClick={this.setCountry} />
-        <StatisticContainerComponent visible={this.state.feature !== undefined} feature={this.state.feature} onStatisticClick={this.setStatistic} />
+        <MapComponent x={51.505} y={-0.09} zoom={3} maxZoom={6} geoData={geoData} onClick={this.setCountry} />
+        <StatisticContainerComponent visible={this.state.feature !== undefined} feature={this.state.feature} onClick={this.setStatistic} />
         <FooterComponent />
       </div>
     );
