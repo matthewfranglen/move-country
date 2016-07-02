@@ -29,7 +29,7 @@ class StatisticContainerComponent extends React.Component {
     var results = getTypes()
       .filter(type => type in feature)
       .map(type => (
-          <StatisticResultComponent key={type} type={type} feature={feature} onClick={this.props.onStatisticClick} />
+          <StatisticResultComponent key={type + '-' + feature[type]} type={type} feature={feature} onClick={this.props.onStatisticClick} />
         ));
 
     return (
