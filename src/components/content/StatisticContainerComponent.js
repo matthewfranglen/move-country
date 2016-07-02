@@ -2,7 +2,7 @@
 
 import React from 'react';
 import StatisticComponent from './StatisticComponent';
-import { getTypes, getDescription, toEmoji } from './statistics';
+import { getTypes, getDescription, toEmoji } from '../../lib/statistics';
 
 require('styles/content/StatisticContainer.scss');
 

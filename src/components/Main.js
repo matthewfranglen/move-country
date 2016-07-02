@@ -6,7 +6,7 @@ import HeaderComponent from './header/HeaderComponent';
 import FooterComponent from './footer/FooterComponent';
 import MapComponent from './content/MapComponent';
 import StatisticContainerComponent from './content/StatisticContainerComponent';
-import { toColor } from './content/statistics';
+import { toColor } from '../lib/statistics';
 
 import countryBorders from 'json!../data/europe.geo.json';
 
