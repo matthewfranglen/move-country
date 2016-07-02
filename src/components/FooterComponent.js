@@ -2,7 +2,7 @@
 
 import React from 'react';
 
-require('styles/footer/Footer.scss');
+require('styles/Footer.scss');
 
 let FooterComponent = () => (
     <div className="footer-component">

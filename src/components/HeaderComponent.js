@@ -2,7 +2,7 @@
 
 import React from 'react';
 
-require('styles/header/Header.scss');
+require('styles/Header.scss');
 
 let HeaderComponent = () => (
     <div className="header-component">
