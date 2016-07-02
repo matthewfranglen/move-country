@@ -7,16 +7,16 @@
 // import TestUtils from 'react-addons-test-utils';
 import createComponent from 'helpers/shallowRenderHelper';
 
-import StatisticsComponent from 'components/content/StatisticsComponent.js';
+import StatisticContainerComponent from 'components/content/StatisticContainerComponent.js';
 
-describe('StatisticsComponent', () => {
+describe('StatisticContainerComponent', () => {
   let component;
 
   beforeEach(() => {
-    component = createComponent(StatisticsComponent);
+    component = createComponent(StatisticContainerComponent);
   });
 
   it('should have its component name as default className', () => {
-    expect(component.props.className).to.equal('statistics-component');
+    expect(component.props.className).to.equal('statistic-container-component');
   });
 });

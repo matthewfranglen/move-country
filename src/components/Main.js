@@ -5,7 +5,7 @@ import React from 'react';
 import HeaderComponent from './header/HeaderComponent';
 import FooterComponent from './footer/FooterComponent';
 import MapComponent from './content/MapComponent';
-import StatisticsComponent from './content/StatisticsComponent';
+import StatisticContainerComponent from './content/StatisticContainerComponent';
 import { toColor } from './content/statistics';
 
 import countryBorders from 'json!./data/europe.geo.json';
@@ -29,7 +29,7 @@ class AppComponent extends React.Component {
       <div className="index">
         <HeaderComponent />
         <MapComponent x={51.505} y={-0.09} zoom={3} maxZoom={6} countryBorders={countryBorders} onCountryClick={this.setCountry} />
-        <StatisticsComponent visible={this.state.feature !== undefined} feature={this.state.feature} onStatisticClick={this.setStatistic} />
+        <StatisticContainerComponent visible={this.state.feature !== undefined} feature={this.state.feature} onStatisticClick={this.setStatistic} />
         <FooterComponent />
       </div>
     );

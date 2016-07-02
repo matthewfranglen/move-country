@@ -1,7 +1,5 @@
 'use strict';
 
-require('styles/content/Statistics.scss');
-
 const statistics = {
   HDI: {
     description: {

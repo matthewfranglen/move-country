@@ -16,6 +16,8 @@ class MapComponent extends React.Component {
     onCountryClick: React.PropTypes.func
   }
 
+  static displayName = 'MapComponent';
+
   constructor(props) {
     super(props);
 
@@ -29,7 +31,7 @@ class MapComponent extends React.Component {
     var position = [this.props.x, this.props.y];
 
     this.map = (
-      <Map center={position} zoom={this.props.zoom} maxZoom={this.props.maxZoom}>
+      <Map className="map-component" center={position} zoom={this.props.zoom} maxZoom={this.props.maxZoom}>
         <TileLayer
           url='http://{s}.tile.osm.org/{z}/{x}/{y}.png'
           attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
@@ -59,7 +61,5 @@ class MapComponent extends React.Component {
   }
 
 }
-
-MapComponent.displayName = 'ContentMapComponent';
 
 export default MapComponent;
