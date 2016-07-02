@@ -29,7 +29,7 @@ install () {
 
 commit () {
   git add assets favicon.ico index.html
-  git commit -m 'Update gh-pages'
+  git commit -m 'Update gh-pages' || true
 }
 
 main
