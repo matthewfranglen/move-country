@@ -29,8 +29,4 @@ class AirbnbComponent extends React.Component {
 
 }
 
-// Uncomment properties you need
-// AirbnbComponent.propTypes = {};
-// AirbnbComponent.defaultProps = {};
-
 export default AirbnbComponent;

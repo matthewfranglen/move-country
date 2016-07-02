@@ -38,12 +38,7 @@ class DetailsComponent extends React.Component {
       </div>
     );
   }
+
 }
-
-DetailsComponent.displayName = 'DetailsDetailsComponent';
-
-// Uncomment properties you need
-// DetailsComponent.propTypes = {};
-// DetailsComponent.defaultProps = {};
 
 export default DetailsComponent;
