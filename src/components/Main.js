@@ -4,7 +4,7 @@ require('styles/App.scss');
 import React from 'react';
 import HeaderComponent from './header/HeaderComponent';
 import FooterComponent from './footer/FooterComponent';
-import MapComponent from './content/MapComponent';
+import MapComponent from './MapComponent';
 import StatisticContainerComponent from './content/StatisticContainerComponent';
 import { toColor } from '../lib/statistics';
 

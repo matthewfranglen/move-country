@@ -3,7 +3,7 @@
 import React from 'react';
 import { GeoJson, Map, TileLayer } from 'react-leaflet';
 
-require('styles/content/Map.scss');
+require('styles/Map.scss');
 
 class MapComponent extends React.Component {
 

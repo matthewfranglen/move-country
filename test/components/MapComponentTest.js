@@ -7,7 +7,7 @@
 // import TestUtils from 'react-addons-test-utils';
 import createComponent from 'helpers/shallowRenderHelper';
 
-import MapComponent from 'components/content/MapComponent.js';
+import MapComponent from 'components/MapComponent.js';
 
 describe('MapComponent', () => {
   let component;
