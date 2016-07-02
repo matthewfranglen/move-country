@@ -1,0 +1,42 @@
+@import './variables.scss';
+
+.header-component {
+  background: $gray-darker;
+  color: $gray-light;
+}
+
+.header-component__container {
+  margin: 0 auto;
+  padding: 20px 15px;
+  max-width: $max-content-width;
+  text-align: center;
+}
+
+.header-component__text {
+  color: $gray-light;
+}
+
+.header-component__text--muted {
+  color: $gray;
+}
+
+.header-component__spacer {
+  color: $gray-dark;
+}
+
+.header-component__text,
+.header-component__link {
+  padding: 2px 5px;
+  font-size: 1em;
+}
+
+.header-component__link,
+.header-component__link:active,
+.header-component__link:visited {
+  color: $gray-light;
+  text-decoration: none;
+}
+
+.header-component__link:hover {
+  color: $gray-lighter;
+}

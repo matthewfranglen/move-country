@@ -1,0 +1,42 @@
+@import './variables.scss';
+
+.footer-component {
+  background: $gray-darker;
+  color: $gray-light;
+}
+
+.footer-component__container {
+  margin: 0 auto;
+  padding: 20px 15px;
+  max-width: $max-content-width;
+  text-align: center;
+}
+
+.footer-component__text {
+  color: $gray-light;
+}
+
+.footer-component__text--muted {
+  color: $gray;
+}
+
+.footer-component__spacer {
+  color: $gray-dark;
+}
+
+.footer-component__text,
+.footer-component__link {
+  padding: 2px 5px;
+  font-size: 1em;
+}
+
+.footer-component__link,
+.footer-component__link:active,
+.footer-component__link:visited {
+  color: $gray-light;
+  text-decoration: none;
+}
+
+.footer-component__link:hover {
+  color: $gray-lighter;
+}
