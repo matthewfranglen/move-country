@@ -6,6 +6,7 @@ import { GeoJson, Map, TileLayer } from 'react-leaflet';
 require('styles/content/Map.scss');
 
 class MapComponent extends React.Component {
+
   propTypes = {
     x: React.PropTypes.number,
     y: React.PropTypes.number,
@@ -48,6 +49,7 @@ class MapComponent extends React.Component {
   handleClick = (feature, layer) => {
     this.props.onCountryClick(feature, layer, this.data);
   }
+
 }
 
 MapComponent.displayName = 'ContentMapComponent';

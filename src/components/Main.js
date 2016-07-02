@@ -10,14 +10,15 @@ import { toColor } from './content/statistics';
 
 import countryBorders from 'json!./data/europe.geo.json';
 
-var AppComponent = React.createClass({
-  getInitialState: function() {
+class AppComponent extends React.Component {
+
+  getInitialState = () => {
     return {
       feature: undefined
     };
-  },
+  }
 
-  render: function() {
+  render = () => {
     return (
       <div className="index">
         <HeaderComponent />
@@ -26,9 +27,9 @@ var AppComponent = React.createClass({
         <FooterComponent />
       </div>
     );
-  },
+  }
 
-  setCountry: function (feature, layer, data) {
+  setCountry = (feature, layer, data) => {
     this.data = data; // TODO: Don't do this
 
     data
@@ -39,18 +40,19 @@ var AppComponent = React.createClass({
     this.setState({
       feature: feature
     });
-  },
+  }
 
-  setStatistic: function (type) {
+  setStatistic = (type) => {
     this.data.forEach(this.setStyle(type));
-  },
+  }
 
-  setStyle: function (type) {
+  setStyle = (type) => {
     return (datum) => {
       var color = toColor(datum.feature.properties[type], type);
       datum.layer.setStyle({ color: color });
     };
   }
-});
+
+}
 
 export default AppComponent;

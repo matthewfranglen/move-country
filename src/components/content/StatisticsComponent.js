@@ -4,6 +4,7 @@ import React from 'react';
 import { getTypes, getDescription, toEmoji } from './statistics';
 
 class StatisticsComponent extends React.Component {
+
   render = () => {
     if (! this.props.feature) {
       return null;
