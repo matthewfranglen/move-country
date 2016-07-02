@@ -12,13 +12,19 @@ import countryBorders from 'json!./data/europe.geo.json';
 
 class AppComponent extends React.Component {
 
-  getInitialState = () => {
-    return {
+  constructor(props) {
+    super(props);
+
+    this.state = {
       feature: undefined
     };
+    this.data = [];
+
+    this.setCountry = this.setCountry.bind(this);
+    this.setStatistic = this.setStatistic.bind(this);
   }
 
-  render = () => {
+  render() {
     return (
       <div className="index">
         <HeaderComponent />
@@ -29,7 +35,7 @@ class AppComponent extends React.Component {
     );
   }
 
-  setCountry = (feature, layer, data) => {
+  setCountry(feature, layer, data) {
     this.data = data; // TODO: Don't do this
 
     data
@@ -42,11 +48,11 @@ class AppComponent extends React.Component {
     });
   }
 
-  setStatistic = (type) => {
+  setStatistic(type) {
     this.data.forEach(this.setStyle(type));
   }
 
-  setStyle = (type) => {
+  setStyle(type) {
     return (datum) => {
       var color = toColor(datum.feature.properties[type], type);
       datum.layer.setStyle({ color: color });

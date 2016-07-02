@@ -5,7 +5,11 @@ import { getTypes, getDescription, toEmoji } from './statistics';
 
 class StatisticsComponent extends React.Component {
 
-  render = () => {
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
     if (! this.props.feature) {
       return null;
     }
@@ -40,7 +44,13 @@ class StatisticsComponent extends React.Component {
 
 class ResultComponent extends React.Component {
 
-  render = () => {
+  constructor(props) {
+    super(props);
+
+    this.onClick = this.onClick.bind(this);
+  }
+
+  render() {
     return (
       <div className="statistics__result">
         <div className="statistics__label">{this.props.name}</div>
@@ -50,7 +60,7 @@ class ResultComponent extends React.Component {
     );
   }
 
-  onClick = () => {
+  onClick() {
     this.props.onStatisticClick(this.props.type);
   }
 

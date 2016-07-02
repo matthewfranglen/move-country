@@ -7,7 +7,7 @@ require('styles/content/Map.scss');
 
 class MapComponent extends React.Component {
 
-  propTypes = {
+  static propTypes = {
     x: React.PropTypes.number,
     y: React.PropTypes.number,
     zoom: React.PropTypes.number,
@@ -16,10 +16,18 @@ class MapComponent extends React.Component {
     onCountryClick: React.PropTypes.func
   }
 
-  componentWillMount = () => {
-    var position = [this.props.x, this.props.y];
+  constructor(props) {
+    super(props);
 
     this.data = [];
+
+    this.events = this.events.bind(this);
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  componentWillMount() {
+    var position = [this.props.x, this.props.y];
+
     this.map = (
       <Map center={position} zoom={this.props.zoom} maxZoom={this.props.maxZoom}>
         <TileLayer
@@ -31,11 +39,11 @@ class MapComponent extends React.Component {
     );
   }
 
-  render = () => {
+  render() {
     return this.map;
   }
 
-  events = (feature, layer) => {
+  events(feature, layer) {
     this.data.push({
         feature: feature,
         layer: layer
@@ -46,7 +54,7 @@ class MapComponent extends React.Component {
     layer.on('click', () => this.handleClick(feature, layer));
   }
 
-  handleClick = (feature, layer) => {
+  handleClick(feature, layer) {
     this.props.onCountryClick(feature, layer, this.data);
   }
 
