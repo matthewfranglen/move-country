@@ -20,7 +20,7 @@ class StatisticContainerComponent extends React.Component {
   }
 
   render() {
-    var feature = this.props.feature.properties;
+    var feature = this.props.feature;
     var results = getTypes()
       .filter(type => type in feature)
       .map(type => (

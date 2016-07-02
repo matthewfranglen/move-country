@@ -44,7 +44,7 @@ class AppComponent extends React.Component {
     layer.setStyle({ color: '#4A4' });
 
     this.setState({
-      feature: feature
+      feature: feature.properties
     });
   }
 

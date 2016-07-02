@@ -25,7 +25,7 @@ class DetailsComponent extends React.Component {
     return (
       <div className="details-component">
         <div className="details-component__title">
-          {this.props.feature.properties.name}
+          {this.props.feature.name}
         </div>
         <div className="details-component__content">
           <div className="details-component__statistics">
