@@ -13,7 +13,7 @@ describe('MapComponent', () => {
   let component;
 
   beforeEach(() => {
-    component = createComponent(MapComponent);
+    component = createComponent(MapComponent, { countryBorders: {} });
   });
 
   it('should have its component name as default className', () => {
