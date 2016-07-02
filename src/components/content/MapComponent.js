@@ -6,8 +6,13 @@ import { GeoJson, Map, TileLayer } from 'react-leaflet';
 require('styles/content/Map.scss');
 
 class MapComponent extends React.Component {
-  render = () => {
-    return this.map;
+  propTypes = {
+    x: React.PropTypes.number,
+    y: React.PropTypes.number,
+    zoom: React.PropTypes.number,
+    maxZoom: React.PropTypes.number,
+    countryBorders: React.PropTypes.object,
+    onCountryClick: React.PropTypes.func
   }
 
   componentWillMount = () => {
@@ -23,6 +28,10 @@ class MapComponent extends React.Component {
         <GeoJson data={this.props.countryBorders} onEachFeature={this.events} />
       </Map>
     );
+  }
+
+  render = () => {
+    return this.map;
   }
 
   events = (feature, layer) => {
@@ -42,9 +51,5 @@ class MapComponent extends React.Component {
 }
 
 MapComponent.displayName = 'ContentMapComponent';
-
-// Uncomment properties you need
-// MapComponent.propTypes = {};
-// MapComponent.defaultProps = {};
 
 export default MapComponent;
