@@ -21,15 +21,12 @@ class StatisticContainerComponent extends React.Component {
       );
     }
 
-    var makeResult = (type) => {
-      return (
-        <StatisticResultComponent key={type} type={type} feature={this.props.feature} onClick={this.props.onStatisticClick} />
-      );
-    };
     var feature = this.props.feature.properties;
     var results = getTypes()
-      .filter(t => t in feature)
-      .map(makeResult);
+      .filter(type => type in feature)
+      .map(type => (
+          <StatisticResultComponent key={type} type={type} feature={feature} onClick={this.props.onStatisticClick} />
+        ));
 
     return (
       <div className="statistic-container-component">
