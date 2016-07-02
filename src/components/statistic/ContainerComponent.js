@@ -1,10 +1,10 @@
 'use strict';
 
 import React from 'react';
-import StatisticComponent from './StatisticComponent';
+import StatisticResultComponent from './ResultComponent';
 import { getTypes, getDescription, toEmoji } from '../../lib/statistics';
 
-require('styles/content/StatisticContainer.scss');
+require('styles/statistic/Container.scss');
 
 class StatisticContainerComponent extends React.Component {
 
@@ -27,7 +27,7 @@ class StatisticContainerComponent extends React.Component {
       var click = this.props.onStatisticClick;
 
       return (
-        <StatisticComponent key={description.name} type={type} name={description.name} value={value} citation={description.citation} onStatisticClick={click} />
+        <StatisticResultComponent key={description.name} type={type} name={description.name} value={value} citation={description.citation} onStatisticClick={click} />
       );
     };
     var feature = this.props.feature.properties;
@@ -48,7 +48,5 @@ class StatisticContainerComponent extends React.Component {
   }
 
 }
-
-StatisticContainerComponent.displayName = 'StatisticContainerComponent';
 
 export default StatisticContainerComponent;

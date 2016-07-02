@@ -7,7 +7,7 @@
 // import TestUtils from 'react-addons-test-utils';
 import createComponent from 'helpers/shallowRenderHelper';
 
-import StatisticContainerComponent from 'components/content/StatisticContainerComponent.js';
+import StatisticContainerComponent from 'components/statistic/ContainerComponent.js';
 
 describe('StatisticContainerComponent', () => {
   let component;

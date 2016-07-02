@@ -5,7 +5,7 @@ import React from 'react';
 import HeaderComponent from './HeaderComponent';
 import FooterComponent from './FooterComponent';
 import MapComponent from './MapComponent';
-import StatisticContainerComponent from './content/StatisticContainerComponent';
+import StatisticContainerComponent from './statistic/ContainerComponent';
 import { toColor } from '../lib/statistics';
 
 import countryBorders from 'json!../data/europe.geo.json';
