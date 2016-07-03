@@ -1,7 +1,7 @@
 'use strict';
 
 import React from 'react';
-import ActionContainerComponent from './ActionContainerComponent';
+import ActionContainerComponent from './actions/ContainerComponent';
 import StatisticContainerComponent from './StatisticContainerComponent';
 
 require('styles/details/Details.scss');
