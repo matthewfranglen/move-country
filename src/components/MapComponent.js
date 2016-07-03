@@ -21,7 +21,7 @@ class MapComponent extends React.Component {
   constructor(props) {
     super(props);
 
-    this.data = [];
+    this.geoData = [];
 
     this.events = this.events.bind(this);
     this.handleClick = this.handleClick.bind(this);
@@ -46,7 +46,7 @@ class MapComponent extends React.Component {
   }
 
   events(feature, layer) {
-    this.data.push({
+    this.geoData.push({
         feature: feature,
         layer: layer
       });
@@ -57,7 +57,7 @@ class MapComponent extends React.Component {
   }
 
   handleClick(feature, layer) {
-    this.props.onClick(feature, layer, this.data);
+    this.props.onClick(feature, layer, this.geoData);
   }
 
 }
