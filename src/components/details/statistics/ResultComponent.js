@@ -10,10 +10,10 @@ class StatisticsResultComponent extends React.Component {
   static displayName = 'StatisticsResultComponent';
 
   static propTypes = {
-    type: React.PropTypes.string,
-    feature: React.PropTypes.object,
-    selected: React.PropTypes.bool,
-    onClick: React.PropTypes.func
+    type: React.PropTypes.string.isRequired,
+    feature: React.PropTypes.object.isRequired,
+    selected: React.PropTypes.bool.isRequired,
+    onClick: React.PropTypes.func.isRequired
   };
 
   constructor(props) {

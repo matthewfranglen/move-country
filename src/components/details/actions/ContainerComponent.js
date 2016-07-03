@@ -10,7 +10,7 @@ class ActionsContainerComponent extends React.Component {
   static displayName = 'ActionsContainerComponent';
 
   static propTypes = {
-    feature: React.PropTypes.object
+    feature: React.PropTypes.object.isRequired
   };
 
   render() {

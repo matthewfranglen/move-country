@@ -11,7 +11,7 @@ class AirbnbComponent extends React.Component {
   static displayName = 'DetailsActionsAirbnbComponent';
 
   static propTypes = {
-    feature: React.PropTypes.object
+    feature: React.PropTypes.object.isRequired
   };
 
   render() {

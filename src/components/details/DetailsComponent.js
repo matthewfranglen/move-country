@@ -11,8 +11,8 @@ class DetailsComponent extends React.Component {
   static displayName = 'DetailsComponent';
 
   static propTypes = {
-    feature: React.PropTypes.object,
-    setStatistic: React.PropTypes.func
+    feature: React.PropTypes.object.isRequired,
+    setStatistic: React.PropTypes.func.isRequired
   };
 
   render() {
