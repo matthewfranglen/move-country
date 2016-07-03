@@ -12,6 +12,7 @@ class StatisticsResultComponent extends React.Component {
   static propTypes = {
     type: React.PropTypes.string,
     feature: React.PropTypes.object,
+    selected: React.PropTypes.bool,
     onClick: React.PropTypes.func
   };
 

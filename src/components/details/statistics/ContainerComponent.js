@@ -12,6 +12,7 @@ class StatisticsContainerComponent extends React.Component {
 
   static propTypes = {
     feature: React.PropTypes.object,
+    type: React.PropTypes.string,
     onClick: React.PropTypes.func
   };
 
@@ -23,9 +24,20 @@ class StatisticsContainerComponent extends React.Component {
     var feature = this.props.feature;
     var results = getTypes()
       .filter(type => type in feature)
-      .map(type => (
-          <StatisticsResultComponent key={type + '-' + feature[type]} type={type} feature={feature} onClick={this.props.onClick} />
-        ));
+      .map(type => {
+          var selected = this.props.type === type;
+          var key = [type, feature[type], selected ? '-s' : '-ns'].join('-');
+
+          return (
+            <StatisticsResultComponent
+                key={key}
+                type={type}
+                feature={feature}
+                selected={selected === type}
+                onClick={this.props.onClick}
+                />
+          );
+        });
 
     return (
       <div className="statistics-container-component">

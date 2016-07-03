@@ -30,7 +30,7 @@ class AppComponent extends React.Component {
       <div className="index">
         <HeaderComponent />
         <MapComponent x={51.505} y={-0.09} zoom={3} maxZoom={6} geoData={countries} onClick={this.setCountry} />
-        <DetailsComponent feature={this.state.feature} setStatistic={this.setStatistic} />
+        <DetailsComponent feature={this.state.feature} type={this.state.type} setStatistic={this.setStatistic} />
         <FooterComponent />
       </div>
     );
