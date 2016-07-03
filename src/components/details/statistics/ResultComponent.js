@@ -1,13 +1,13 @@
 'use strict';
 
 import React from 'react';
-import { getDescription, toEmoji } from '../../lib/statistics';
+import { getDescription, toEmoji } from '../../../lib/statistics';
 
-require('styles/details/Statistic.scss');
+require('styles/details/statistics/Result.scss');
 
-class StatisticComponent extends React.Component {
+class StatisticsResultComponent extends React.Component {
 
-  static displayName = 'StatisticComponent';
+  static displayName = 'StatisticsResultComponent';
 
   static propTypes = {
     type: React.PropTypes.string,
@@ -31,10 +31,10 @@ class StatisticComponent extends React.Component {
 
   render() {
     return (
-      <div className="statistic-component">
-        <div className="statistic-component__label">{this.state.name}</div>
-        <a onClick={this.onClick} className="statistic-component__value">{this.state.value}</a>
-        <a href={this.state.citation} className="statistic-component__citation">[source]</a>
+      <div className="statistics-result-component">
+        <div className="statistics-result-component__label">{this.state.name}</div>
+        <a onClick={this.onClick} className="statistics-result-component__value">{this.state.value}</a>
+        <a href={this.state.citation} className="statistics-result-component__citation">[source]</a>
       </div>
     );
   }
@@ -45,4 +45,4 @@ class StatisticComponent extends React.Component {
 
 }
 
-export default StatisticComponent;
+export default StatisticsResultComponent;

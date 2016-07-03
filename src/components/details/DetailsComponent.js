@@ -2,7 +2,7 @@
 
 import React from 'react';
 import ActionContainerComponent from './actions/ContainerComponent';
-import StatisticContainerComponent from './StatisticContainerComponent';
+import StatisticContainerComponent from './statistics/ContainerComponent';
 
 require('styles/details/Details.scss');
 

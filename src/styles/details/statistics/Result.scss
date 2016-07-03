@@ -1,0 +1,21 @@
+@import '../variables.scss';
+
+.statistics-result-component {
+  display: table-row;
+}
+
+.statistics-result-component__label,
+.statistics-result-component__value,
+.statistics-result-component__citation {
+  display: table-cell;
+  padding: 0 16px 8px;
+}
+
+.statistics-result-component__label {
+  text-align: right;
+}
+
+.statistics-result-component__citation {
+  color: $gray;
+  text-decoration: none;
+}

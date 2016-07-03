@@ -7,16 +7,16 @@
 // import TestUtils from 'react-addons-test-utils';
 import createComponent from 'helpers/shallowRenderHelper';
 
-import StatisticComponent from 'components/details/StatisticComponent.js';
+import StatisticsResultComponent from 'components/details/statistics/ResultComponent.js';
 
-describe('StatisticComponent', () => {
+describe('StatisticsResultComponent', () => {
   let component;
 
   beforeEach(() => {
-    component = createComponent(StatisticComponent, { type: 'HDI', feature: { HDI: 1 } });
+    component = createComponent(StatisticsResultComponent, { type: 'HDI', feature: { HDI: 1 } });
   });
 
   it('should have its component name as default className', () => {
-    expect(component.props.className).to.equal('statistic-component');
+    expect(component.props.className).to.equal('statistics-result-component');
   });
 });
