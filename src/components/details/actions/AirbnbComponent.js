@@ -15,6 +15,10 @@ class AirbnbComponent extends React.Component {
   };
 
   render() {
+    if (! this.props.feature) {
+      return (<div className="airbnb-component"></div>);
+    }
+
     var keyword = this.props.feature.airbnb || this.props.feature.name;
     var url = 'https://www.airbnb.co.uk/s/' + keyword;
 

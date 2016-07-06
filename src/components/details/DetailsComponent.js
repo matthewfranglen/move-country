@@ -1,8 +1,8 @@
 'use strict';
 
 import React from 'react';
-import ActionContainerComponent from './ActionContainerComponent';
-import StatisticContainerComponent from './StatisticContainerComponent';
+import ActionContainerComponent from './actions/ContainerComponent';
+import StatisticsContainerComponent from './statistics/ContainerComponent';
 
 require('styles/details/Details.scss');
 
@@ -12,7 +12,8 @@ class DetailsComponent extends React.Component {
 
   static propTypes = {
     feature: React.PropTypes.object,
-    setStatistic: React.PropTypes.func
+    type: React.PropTypes.string,
+    setStatistic: React.PropTypes.func.isRequired
   };
 
   render() {
@@ -29,7 +30,7 @@ class DetailsComponent extends React.Component {
         </div>
         <div className="details-component__content">
           <div className="details-component__statistics">
-            <StatisticContainerComponent feature={this.props.feature} onClick={this.props.setStatistic} />
+            <StatisticsContainerComponent type={this.props.type} feature={this.props.feature} onClick={this.props.setStatistic} />
           </div>
           <div className="details-component__actions">
             <ActionContainerComponent feature={this.props.feature} />
