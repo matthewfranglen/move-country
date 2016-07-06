@@ -1,21 +1,38 @@
 @import '../../variables.scss';
 
 .statistics-result-component {
-  display: table-row;
+  padding: 0 0 16px;
+  cursor: pointer;
 }
 
-.statistics-result-component__label,
-.statistics-result-component__value,
-.statistics-result-component__citation {
-  display: table-cell;
-  padding: 0 16px 8px;
+.statistics-result-component__summary {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.statistics-result-component__icon,
+.statistics-result-component__label {
+  padding: 0 16px;
+}
+
+.statistics-result-component__icon,
+.statistics-result-component__value {
+  width: 16px;
+  text-align: center;
 }
 
 .statistics-result-component__label {
   text-align: right;
 }
 
+.statistics-result-component__detail {
+  padding: 16px 0 16px 80px;
+  max-width: 480px;
+}
+
 .statistics-result-component__citation {
+  float: right;
+  padding: 0 16px;
   color: $gray;
   text-decoration: none;
 }

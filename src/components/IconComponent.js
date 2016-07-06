@@ -4,8 +4,12 @@ import React from 'react';
 
 require('styles/Icon.scss');
 
+function makeClassName () {
+  return Array.from(arguments).filter(e => e).join(' ');
+}
+
 let IconComponent = (props) => (
-  <i className={'fa fa-' + props.name}></i>
+  <i className={makeClassName(props.className, 'fa', 'fa-' + props.name)}></i>
 );
 
 IconComponent.displayName = 'IconComponent';

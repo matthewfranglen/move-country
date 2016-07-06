@@ -26,6 +26,7 @@ class StatisticsResultComponent extends React.Component {
     this.state = {
       name: description.name,
       value: value,
+      detail: description.detail,
       citation: description.citation
     };
 
@@ -33,12 +34,28 @@ class StatisticsResultComponent extends React.Component {
   }
 
   render() {
+    if (this.props.selected) {
+      return (
+        <div onClick={this.onClick} className="statistics-result-component">
+          <div className="statistics-result-component__summary">
+            <IconComponent className="statistics-result-component__icon" name="chevron-down"></IconComponent>
+            <a className="statistics-result-component__value">{this.state.value}</a>
+            <div className="statistics-result-component__label">{this.state.name}</div>
+          </div>
+          <div className="statistics-result-component__detail">
+            {this.state.detail}
+          </div>
+          <a href={this.state.citation} className="statistics-result-component__citation">[source]</a>
+        </div>
+      );
+    }
     return (
-      <div className="statistics-result-component">
-        <IconComponent name="chevron-right"></IconComponent>
-        <div className="statistics-result-component__label">{this.state.name}</div>
-        <a className="statistics-result-component__value">{this.state.value}</a>
-        <a href={this.state.citation} className="statistics-result-component__citation">[source]</a>
+      <div onClick={this.onClick} className="statistics-result-component">
+        <div className="statistics-result-component__summary">
+          <IconComponent className="statistics-result-component__icon" name="chevron-right"></IconComponent>
+          <a className="statistics-result-component__value">{this.state.value}</a>
+          <div className="statistics-result-component__label">{this.state.name}</div>
+        </div>
       </div>
     );
   }

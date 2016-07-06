@@ -29,13 +29,7 @@ class StatisticsContainerComponent extends React.Component {
           var key = [type, feature[type], selected ? '-s' : '-ns'].join('-');
 
           return (
-            <StatisticsResultComponent
-                key={key}
-                type={type}
-                feature={feature}
-                selected={selected === type}
-                onClick={this.props.onClick}
-                />
+            <StatisticsResultComponent key={key} type={type} feature={feature} selected={selected} onClick={this.props.onClick} />
           );
         });
 
