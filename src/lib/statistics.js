@@ -61,6 +61,9 @@ function toColor (value, type) {
 }
 
 function toRank (value, type) {
+  if (! type) {
+    return;
+  }
   var ranks = statistics[type].ranks;
 
   if (value <= ranks.high) {

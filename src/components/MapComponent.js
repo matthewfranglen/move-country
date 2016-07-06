@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { GeoJson, Map, TileLayer } from 'react-leaflet';
+import { toColor } from '../lib/statistics';
 
 require('styles/Map.scss');
 
@@ -15,6 +16,8 @@ class MapComponent extends React.Component {
     zoom: React.PropTypes.number,
     maxZoom: React.PropTypes.number,
     geoData: React.PropTypes.object,
+    feature: React.PropTypes.object,
+    type: React.PropTypes.string,
     onClick: React.PropTypes.func
   }
 
@@ -25,6 +28,7 @@ class MapComponent extends React.Component {
 
     this.events = this.events.bind(this);
     this.handleClick = this.handleClick.bind(this);
+    this.updateCountryLayer = this.updateCountryLayer.bind(this);
   }
 
   componentWillMount() {
@@ -42,23 +46,63 @@ class MapComponent extends React.Component {
   }
 
   render() {
+    this.updateLayers();
+
     return this.map;
   }
 
   events(feature, layer) {
-    this.geoData.push({
-        feature: feature,
-        layer: layer
+    var country = { feature: feature, layer: layer };
+    this.geoData.push(country);
+
+    layer.bindPopup(feature.properties.name);
+    layer.on('click', () => this.handleClick(feature));
+
+    this.updateCountryLayer(country);
+  }
+
+  handleClick(feature) {
+    this.props.onClick(feature);
+  }
+
+  updateLayers() {
+    this.geoData.forEach(this.updateCountryLayer);
+  }
+
+  updateCountryLayer(country) {
+    if (! this.props.feature) {
+      country.layer.setStyle({
+        stroke: false,
+        color: '#333'
       });
 
-    layer.setStyle({ color: '#333' });
-    layer.bindPopup(feature.properties.name);
-    layer.on('click', () => this.handleClick(feature, layer));
+      return;
+    }
+
+    if (! this.props.type) {
+      country.layer.setStyle({
+        stroke: this.isSelected(country),
+        color: '#333'
+      });
+
+      return;
+    }
+
+    country.layer.setStyle({
+      stroke: this.isSelected(country),
+      color: this.getColor(country)
+    });
+
   }
 
-  handleClick(feature, layer) {
-    this.props.onClick(feature, layer, this.geoData);
+  isSelected(country) {
+    return country.feature.properties.name === this.props.feature.name;
   }
+
+  getColor(country) {
+    return toColor(country.feature.properties[this.props.type], this.props.type);
+  }
+
 
 }
 
