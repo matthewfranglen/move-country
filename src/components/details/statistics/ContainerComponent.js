@@ -24,14 +24,7 @@ class StatisticsContainerComponent extends React.Component {
     var feature = this.props.feature;
     var results = getTypes()
       .filter(type => type in feature)
-      .map(type => {
-          var selected = this.props.type === type;
-          var key = [type, feature[type], selected ? '-s' : '-ns'].join('-');
-
-          return (
-            <StatisticsResultComponent key={key} type={type} feature={feature} selected={selected} onClick={this.props.onClick} />
-          );
-        });
+      .map(type => (<StatisticsResultComponent key={this.createKey(type)} type={type} feature={feature} selected={this.isSelected(type)} onClick={this.props.onClick} />));
 
     return (
       <div className="statistics-container-component">
@@ -43,6 +36,14 @@ class StatisticsContainerComponent extends React.Component {
         </div>
       </div>
     );
+  }
+
+  createKey(type) {
+    return [type, this.props.feature[type], this.isSelected() ? 's' : 'ns'].join('-');
+  }
+
+  isSelected(type) {
+    return this.props.type === type;
   }
 
 }
