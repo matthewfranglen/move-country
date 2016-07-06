@@ -5,7 +5,7 @@ import React from 'react';
 require('styles/Icon.scss');
 
 let IconComponent = (props) => (
-  <i className={'fa fa-' + props.icon}></i>
+  <i className={'fa fa-' + props.name}></i>
 );
 
 IconComponent.displayName = 'IconComponent';
