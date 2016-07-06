@@ -1,0 +1,39 @@
+@import '../../variables.scss';
+
+.statistics-result-component {
+  padding: 0 0 16px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.statistics-result-component__summary {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.statistics-result-component__icon,
+.statistics-result-component__label {
+  padding: 0 16px;
+}
+
+.statistics-result-component__icon,
+.statistics-result-component__value {
+  width: 16px;
+  text-align: center;
+}
+
+.statistics-result-component__label {
+  text-align: right;
+}
+
+.statistics-result-component__detail {
+  padding: 16px 16px 16px 80px;
+  text-align: justify;
+  color: $gray-light;
+}
+
+.statistics-result-component__citation {
+  float: right;
+  color: $gray;
+  text-decoration: none;
+}

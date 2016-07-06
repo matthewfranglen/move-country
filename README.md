@@ -1,7 +1,7 @@
 How to Leave the UK
 ===================
 
-This is a website dedicated to interactive comparisons of European countries. You can see it at https://exit.me.uk
+This is a website dedicated to interactive comparisons of European countries. You can see it at http://exit.me.uk
 
 Contributions
 -------------
