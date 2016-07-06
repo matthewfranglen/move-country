@@ -3,6 +3,7 @@
 .statistics-result-component {
   padding: 0 0 16px;
   cursor: pointer;
+  width: 100%;
 }
 
 .statistics-result-component__summary {
@@ -26,13 +27,13 @@
 }
 
 .statistics-result-component__detail {
-  padding: 16px 0 16px 80px;
-  max-width: 480px;
+  padding: 16px 16px 16px 80px;
+  text-align: justify;
+  color: $gray-light;
 }
 
 .statistics-result-component__citation {
   float: right;
-  padding: 0 16px;
   color: $gray;
   text-decoration: none;
 }

@@ -41,7 +41,7 @@ const colors = {
   high: '#81C784',
   medium: '#FFF176',
   low: '#FF8A65',
-  very_low: '#E57373'
+  very_low: '#F06292'
 };
 
 function getTypes () {
