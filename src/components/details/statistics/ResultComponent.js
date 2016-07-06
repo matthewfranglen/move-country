@@ -1,13 +1,10 @@
 'use strict';
 
 import React from 'react';
-import Icon from 'react-native-vector-icons/FontAwesome';
 import { getDescription, toEmoji } from '../../../lib/statistics';
+import IconComponent from '../../IconComponent';
 
 require('styles/details/statistics/Result.scss');
-
-const SELECTED_COLOR = '#AAA';
-const DESELECTED_COLOR = '#444';
 
 
 class StatisticsResultComponent extends React.Component {
@@ -38,13 +35,7 @@ class StatisticsResultComponent extends React.Component {
   render() {
     return (
       <div className="statistics-result-component">
-        <Icon
-            onClick={this.onClick}
-            className="statistics-result-component__value"
-            name="eye"
-            size={32}
-            color={this.props.selectted ? SELECTED_COLOR : DESELECTED_COLOR}
-          />
+        <IconComponent name="chevron-right"></IconComponent>
         <div className="statistics-result-component__label">{this.state.name}</div>
         <a onClick={this.onClick} className="statistics-result-component__value">{this.state.value}</a>
         <a href={this.state.citation} className="statistics-result-component__citation">[source]</a>
