@@ -11,8 +11,8 @@ class StatisticsContainerComponent extends React.Component {
   static displayName = 'StatisticsContainerComponent';
 
   static propTypes = {
-    feature: React.PropTypes.object.isRequired,
-    type: React.PropTypes.string.isRequired,
+    feature: React.PropTypes.object,
+    type: React.PropTypes.string,
     onClick: React.PropTypes.func.isRequired
   };
 

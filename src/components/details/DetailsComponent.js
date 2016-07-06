@@ -2,7 +2,7 @@
 
 import React from 'react';
 import ActionContainerComponent from './actions/ContainerComponent';
-import StatisticContainerComponent from './statistics/ContainerComponent';
+import StatisticsContainerComponent from './statistics/ContainerComponent';
 
 require('styles/details/Details.scss');
 
@@ -11,8 +11,8 @@ class DetailsComponent extends React.Component {
   static displayName = 'DetailsComponent';
 
   static propTypes = {
-    feature: React.PropTypes.object.isRequired,
-    type: React.PropTypes.string.isRequired,
+    feature: React.PropTypes.object,
+    type: React.PropTypes.string,
     setStatistic: React.PropTypes.func.isRequired
   };
 
@@ -30,7 +30,7 @@ class DetailsComponent extends React.Component {
         </div>
         <div className="details-component__content">
           <div className="details-component__statistics">
-            <StatisticContainerComponent feature={this.props.feature} onClick={this.props.setStatistic} />
+            <StatisticsContainerComponent type={this.props.type} feature={this.props.feature} onClick={this.props.setStatistic} />
           </div>
           <div className="details-component__actions">
             <ActionContainerComponent feature={this.props.feature} />

@@ -37,7 +37,7 @@ class StatisticsResultComponent extends React.Component {
       <div className="statistics-result-component">
         <IconComponent name="chevron-right"></IconComponent>
         <div className="statistics-result-component__label">{this.state.name}</div>
-        <a onClick={this.onClick} className="statistics-result-component__value">{this.state.value}</a>
+        <a className="statistics-result-component__value">{this.state.value}</a>
         <a href={this.state.citation} className="statistics-result-component__citation">[source]</a>
       </div>
     );
