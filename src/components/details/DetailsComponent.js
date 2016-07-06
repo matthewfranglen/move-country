@@ -12,6 +12,7 @@ class DetailsComponent extends React.Component {
 
   static propTypes = {
     feature: React.PropTypes.object.isRequired,
+    type: React.PropTypes.string.isRequired,
     setStatistic: React.PropTypes.func.isRequired
   };
 
