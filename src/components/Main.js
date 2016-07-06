@@ -36,11 +36,21 @@ class AppComponent extends React.Component {
   }
 
   setCountry(feature) {
-    this.setState({ feature: feature.properties });
+    if (feature.properties === this.state.feature) {
+      this.setState({ feature: undefined });
+    }
+    else {
+      this.setState({ feature: feature.properties });
+    }
   }
 
   setStatistic(type) {
-    this.setState({ type: type });
+    if (type === this.state.type) {
+      this.setState({ type: undefined });
+    }
+    else {
+      this.setState({ type: type });
+    }
   }
 
 }
