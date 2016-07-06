@@ -70,39 +70,22 @@ class MapComponent extends React.Component {
   }
 
   updateCountryLayer(country) {
-    if (! this.props.feature) {
-      country.layer.setStyle({
-        stroke: false,
-        color: '#333'
-      });
-
-      return;
-    }
-
-    if (! this.props.type) {
-      country.layer.setStyle({
-        stroke: this.isSelected(country),
-        color: '#333'
-      });
-
-      return;
-    }
-
     country.layer.setStyle({
       stroke: this.isSelected(country),
       color: this.getColor(country)
     });
-
   }
 
   isSelected(country) {
-    return country.feature.properties.name === this.props.feature.name;
+    return this.props.feature && country.feature.properties.name === this.props.feature.name;
   }
 
   getColor(country) {
+    if (! this.props.type) {
+      return '#333';
+    }
     return toColor(country.feature.properties[this.props.type], this.props.type);
   }
-
 
 }
 
