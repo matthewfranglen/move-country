@@ -3,6 +3,26 @@ How to Leave the UK
 
 This is a website dedicated to interactive comparisons of European countries. You can see it at http://exit.me.uk
 
+Installation and Execution
+--------------------------
+
+This requires node and npm.
+
+### Installation
+
+```bash
+npm install
+bin/build-data
+```
+
+### Execution
+
+```bash
+npm run serve
+```
+
+This should open a new tab in your browser. If it does not then go to http://localhost:8000/
+
 Contributions
 -------------
 
