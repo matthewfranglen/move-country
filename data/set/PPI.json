@@ -1,0 +1,119 @@
+{
+  "Albania": {
+    "PPI": 18.79
+  },
+  "Austria": {
+    "PPI": 10.67
+  },
+  "Belgium": {
+    "PPI": 6.995
+  },
+  "Bulgaria": {
+    "PPI": 8.68
+  },
+  "Bosnia and Herzegovina": {
+    "PPI": 12.395
+  },
+  "Belarus": {
+    "PPI": 22.13
+  },
+  "Switzerland": {
+    "PPI": 9.523333
+  },
+  "Czech Republic": {
+    "PPI": 11.225
+  },
+  "Germany": {
+    "PPI": 8.584
+  },
+  "Denmark": {
+    "PPI": 7.68
+  },
+  "Spain": {
+    "PPI": 9.106
+  },
+  "Estonia": {
+    "PPI": 11.38
+  },
+  "Finland": {
+    "PPI": 8.48
+  },
+  "France": {
+    "PPI": 13.455
+  },
+  "United Kingdom": {
+    "PPI": 12.236667
+  },
+  "Greece": {
+    "PPI": 6.996667
+  },
+  "Croatia": {
+    "PPI": 12.4975
+  },
+  "Hungary": {
+    "PPI": 10.1
+  },
+  "Ireland": {
+    "PPI": 9.86
+  },
+  "Iceland": {
+    "PPI": 5.69
+  },
+  "Italy": {
+    "PPI": 12.633333
+  },
+  "Kosovo": {
+    "PPI": 12.56
+  },
+  "Lithuania": {
+    "PPI": 13.16
+  },
+  "Luxembourg": {
+    "PPI": 9.01
+  },
+  "Latvia": {
+    "PPI": 11.2
+  },
+  "Moldova": {
+    "PPI": 18.68
+  },
+  "Macedonia": {
+    "PPI": 14.375
+  },
+  "Montenegro": {
+    "PPI": 15.31
+  },
+  "Netherlands": {
+    "PPI": 8.82
+  },
+  "Norway": {
+    "PPI": 8.0275
+  },
+  "Poland": {
+    "PPI": 10.435
+  },
+  "Portugal": {
+    "PPI": 9.895
+  },
+  "Romania": {
+    "PPI": 11.331429
+  },
+  "Russia": {
+    "PPI": 16.793333
+  },
+  "Serbia": {
+    "PPI": 16.645
+  },
+  "Slovakia": {
+    "PPI": 10.595
+  },
+  "Slovenia": {
+    "PPI": null
+  },
+  "Sweden": {
+    "PPI": 9.88
+  },
+  "Ukraine": {
+    "PPI": 27.2725
+  }
+}
