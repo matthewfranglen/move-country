@@ -1,0 +1,80 @@
+#!/usr/bin/env node
+
+const fs = require('fs');
+
+const BASE_FOLDER = __dirname + '/..';
+const DATA_BASE_FOLDER = BASE_FOLDER + '/data';
+const DATA_BASE_FILE = DATA_BASE_FOLDER + '/europe.geo.json';
+const DATA_SET_FOLDER = DATA_BASE_FOLDER + '/set';
+const OUTPUT_FILE = BASE_FOLDER + '/src/data/europe.geo.json';
+
+const print = console.log.bind(console);
+
+function main() {
+  listDataSets()
+    .then(loadDataSets)
+    .then(sets => loadJsonFile(DATA_BASE_FILE)
+        .then(base => applyDataSets(minifyBase(base), sets))
+    )
+    .then(JSON.stringify)
+    .then(content => fs.writeFile(OUTPUT_FILE, content));
+}
+
+function listDataSets() {
+  return new Promise(resolve => fs.readdir(DATA_SET_FOLDER, (err, files) => resolve(files.map(f => DATA_SET_FOLDER + '/' + f))));
+}
+
+function loadDataSets(setFiles) {
+  const filePromises = setFiles.map(file => loadJsonFile(file).then(content => [toKey(file), content]));
+  return Promise.all(filePromises).then(toObject);
+}
+
+function loadJsonFile(file) {
+  return new Promise(resolve => fs.readFile(file, 'utf-8', (err, data) => resolve(JSON.parse(data))));
+}
+
+function toKey(file) {
+  return file.replace(/.*\//, '').replace('.json', '');
+}
+
+function toObject(files) {
+  return files.reduce((o, c) => {
+    o[c[0]] = c[1];
+    return o;
+  }, {});
+}
+
+function minifyBase(base) {
+  base.features.forEach(f => f.properties = { 'name': f.properties.name_long });
+
+  return base;
+}
+
+function applyDataSets(base, sets) {
+  Object.keys(sets)
+    .forEach(key => {
+      merge(base, sets[key], key)
+    });
+  return base;
+}
+
+function merge(base, set, key) {
+  Object.keys(set).forEach(updateCountry(base, set, key));
+}
+
+function updateCountry(base, set, key) {
+  return country => {
+    const entry = base.features.find(matchesCountry(country));
+    if (entry && set[country]) {
+      entry.properties[key] = set[country];
+    }
+  };
+}
+
+function matchesCountry(country) {
+  return f => f.properties.name === country
+}
+
+main();
+
+// vim: set syntax=js :
