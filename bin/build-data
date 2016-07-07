@@ -2,9 +2,11 @@
 
 const fs = require('fs');
 
-const DATA_BASE_FOLDER = __dirname + '/../data';
+const BASE_FOLDER = __dirname + '/..';
+const DATA_BASE_FOLDER = BASE_FOLDER + '/data';
 const DATA_BASE_FILE = DATA_BASE_FOLDER + '/europe.geo.json';
 const DATA_SET_FOLDER = DATA_BASE_FOLDER + '/set';
+const OUTPUT_FILE = BASE_FOLDER + '/src/data/europe.geo.json';
 
 const print = console.log.bind(console);
 
@@ -15,7 +17,7 @@ function main() {
         .then(base => applyDataSets(minifyBase(base), sets))
     )
     .then(JSON.stringify)
-    .then(print);
+    .then(content => fs.writeFile(OUTPUT_FILE, content));
 }
 
 function listDataSets() {
