@@ -12,7 +12,7 @@ function main() {
   listDataSets()
     .then(loadDataSets)
     .then(sets => loadJsonFile(DATA_BASE_FILE)
-        .then(base => applyDataSets(base, sets))
+        .then(base => applyDataSets(minifyBase(base), sets))
     )
     .then(JSON.stringify)
     .then(print);
@@ -42,6 +42,12 @@ function toObject(files) {
   }, {});
 }
 
+function minifyBase(base) {
+  base.features.forEach(f => f.properties = { 'name': f.properties.name_long });
+
+  return base;
+}
+
 function applyDataSets(base, sets) {
   Object.keys(sets)
     .forEach(key => {
@@ -57,14 +63,14 @@ function merge(base, set, key) {
 function updateCountry(base, set, key) {
   return country => {
     const entry = base.features.find(matchesCountry(country));
-    if (entry) {
+    if (entry && set[country]) {
       entry.properties[key] = set[country];
     }
   };
 }
 
 function matchesCountry(country) {
-  return f => f.properties.name_long === country
+  return f => f.properties.name === country
 }
 
 main();
