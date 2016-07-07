@@ -1,119 +1,41 @@
 {
-  "Albania": {
-    "HDI": 85
-  },
-  "Austria": {
-    "HDI": 23
-  },
-  "Belgium": {
-    "HDI": 21
-  },
-  "Bulgaria": {
-    "HDI": 59
-  },
-  "Bosnia and Herzegovina": {
-    "HDI": null
-  },
-  "Belarus": {
-    "HDI": 50
-  },
-  "Switzerland": {
-    "HDI": 3
-  },
-  "Czech Republic": {
-    "HDI": 28
-  },
-  "Germany": {
-    "HDI": 6
-  },
-  "Denmark": {
-    "HDI": 4
-  },
-  "Spain": {
-    "HDI": 26
-  },
-  "Estonia": {
-    "HDI": 30
-  },
-  "Finland": {
-    "HDI": 24
-  },
-  "France": {
-    "HDI": 22
-  },
-  "United Kingdom": {
-    "HDI": 14
-  },
-  "Greece": {
-    "HDI": 29
-  },
-  "Croatia": {
-    "HDI": 47
-  },
-  "Hungary": {
-    "HDI": 44
-  },
-  "Ireland": {
-    "HDI": 6
-  },
-  "Iceland": {
-    "HDI": 16
-  },
-  "Italy": {
-    "HDI": 27
-  },
-  "Kosovo": {
-    "HDI": null
-  },
-  "Lithuania": {
-    "HDI": 37
-  },
-  "Luxembourg": {
-    "HDI": 19
-  },
-  "Latvia": {
-    "HDI": 46
-  },
-  "Moldova": {
-    "HDI": 107
-  },
-  "Macedonia": {
-    "HDI": 81
-  },
-  "Montenegro": {
-    "HDI": 49
-  },
-  "Netherlands": {
-    "HDI": 5
-  },
-  "Norway": {
-    "HDI": 1
-  },
-  "Poland": {
-    "HDI": 36
-  },
-  "Portugal": {
-    "HDI": 43
-  },
-  "Romania": {
-    "HDI": 52
-  },
-  "Russia": {
-    "HDI": 50
-  },
-  "Serbia": {
-    "HDI": 66
-  },
-  "Slovakia": {
-    "HDI": 35
-  },
-  "Slovenia": {
-    "HDI": 25
-  },
-  "Sweden": {
-    "HDI": 14
-  },
-  "Ukraine": {
-    "HDI": 81
-  }
+  "Albania": 85,
+  "Austria": 23,
+  "Belgium": 21,
+  "Bulgaria": 59,
+  "Bosnia and Herzegovina": null,
+  "Belarus": 50,
+  "Switzerland": 3,
+  "Czech Republic": 28,
+  "Germany": 6,
+  "Denmark": 4,
+  "Spain": 26,
+  "Estonia": 30,
+  "Finland": 24,
+  "France": 22,
+  "United Kingdom": 14,
+  "Greece": 29,
+  "Croatia": 47,
+  "Hungary": 44,
+  "Ireland": 6,
+  "Iceland": 16,
+  "Italy": 27,
+  "Kosovo": null,
+  "Lithuania": 37,
+  "Luxembourg": 19,
+  "Latvia": 46,
+  "Moldova": 107,
+  "Macedonia": 81,
+  "Montenegro": 49,
+  "Netherlands": 5,
+  "Norway": 1,
+  "Poland": 36,
+  "Portugal": 43,
+  "Romania": 52,
+  "Russia": 50,
+  "Serbia": 66,
+  "Slovakia": 35,
+  "Slovenia": 25,
+  "Sweden": 14,
+  "Ukraine": 81
 }
