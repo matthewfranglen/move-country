@@ -1,3 +1,19 @@
+@import '../../variables.scss';
+
 .airbnb-component {
   padding: 0 0 16px;
+  text-align: center;
+}
+
+.airbnb-component__link {
+  text-decoration: none;
+  color: $gray-darker;
+}
+
+.airbnb-component__icon {
+  font-size: 36pt;
+}
+
+.airbnb-component__label {
+  font-size: 12pt;
 }

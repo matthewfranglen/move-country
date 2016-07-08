@@ -1,10 +1,9 @@
 'use strict';
 
 import React from 'react';
+import IconComponent from '../../IconComponent';
 
 require('styles/details/actions/Airbnb.scss');
-
-const airbnbLogo = require('../../../images/airbnb.png');
 
 class AirbnbComponent extends React.Component {
 
@@ -24,8 +23,10 @@ class AirbnbComponent extends React.Component {
 
     return (
       <div className="airbnb-component">
-        <a target="_blank" href={url}>
-          <img src={airbnbLogo} alt={'Airbnb for ' + this.props.feature.name} />
+        <a className="airbnb-component__link" target="_blank" href={url}>
+          <IconComponent className="airbnb-component__icon" name="bed"></IconComponent>
+          <br />
+          <div className="airbnb-component__label">Accommodation</div>
         </a>
       </div>
     );
