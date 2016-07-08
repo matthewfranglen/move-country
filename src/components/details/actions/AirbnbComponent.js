@@ -1,14 +1,13 @@
 'use strict';
 
 import React from 'react';
+import IconComponent from '../../IconComponent';
 
 require('styles/details/actions/Airbnb.scss');
 
-const airbnbLogo = require('../../../images/airbnb.png');
-
 class AirbnbComponent extends React.Component {
 
-  static displayName = 'DetailsActionsAirbnbComponent';
+  static displayName = 'AirbnbComponent';
 
   static propTypes = {
     feature: React.PropTypes.object
@@ -23,11 +22,11 @@ class AirbnbComponent extends React.Component {
     var url = 'https://www.airbnb.co.uk/s/' + keyword;
 
     return (
-      <div className="airbnb-component">
-        <a target="_blank" href={url}>
-          <img src={airbnbLogo} alt={'Airbnb for ' + this.props.feature.name} />
-        </a>
-      </div>
+      <a className="airbnb-component" target="_blank" href={url}>
+        <IconComponent className="airbnb-component__icon" name="bed"></IconComponent>
+        <br />
+        <div className="airbnb-component__label">Accommodation</div>
+      </a>
     );
   }
 

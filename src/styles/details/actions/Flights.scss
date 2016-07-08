@@ -1,6 +1,6 @@
 @import '../../variables.scss';
 
-.airbnb-component {
+.flights-component {
   width: 128px;
   height: 128px;
   padding: 16px;
@@ -22,15 +22,15 @@
   transition: all 0.3s ease-in-out;
 }
 
-.airbnb-component:hover {
+.flights-component:hover {
   background-color: $gray;
   box-shadow: 5px 5px 5px 5px $gray-darker;
 }
 
-.airbnb-component__icon {
+.flights-component__icon {
   font-size: 36pt;
 }
 
-.airbnb-component__label {
+.flights-component__label {
   font-size: 12pt;
 }
