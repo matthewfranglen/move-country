@@ -1,8 +1,26 @@
 @import '../../variables.scss';
 
 .airbnb-component {
-  padding: 0 0 16px;
+  padding: 16px;
+  margin: 16px;
   text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  width: 128px;
+  height: 128px;
+  border: thin solid $gray;
+  border-radius: 50%;
+  box-shadow: 2px 2px 2px 2px $gray-darker;
+  transition: box-shadow 500ms;
+  transition: background-color 250ms;
+}
+
+.airbnb-component:hover {
+  background-color: $gray;
+  box-shadow: 5px 5px 5px 5px $gray-darker;
 }
 
 .airbnb-component__link {
