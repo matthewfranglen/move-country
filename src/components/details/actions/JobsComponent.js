@@ -23,7 +23,7 @@ class JobsComponent extends React.Component {
 
     return (
       <a className="jobs-component" target="_blank" href={url}>
-        <IconComponent className="jobs-component__icon" name="building"></IconComponent>
+        <IconComponent className="jobs-component__icon" name="briefcase"></IconComponent>
         <br />
         <div className="jobs-component__label">Jobs</div>
       </a>
