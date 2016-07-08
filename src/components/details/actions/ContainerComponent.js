@@ -2,6 +2,7 @@
 
 import React from 'react';
 import AirbnbComponent from './AirbnbComponent';
+import FlightsComponent from './FlightsComponent';
 
 require('styles/details/actions/Container.scss');
 
@@ -24,6 +25,7 @@ class ActionsContainerComponent extends React.Component {
           check out {this.props.feature.name}
         </div>
         <div className="actions-container-component__content">
+          <FlightsComponent feature={this.props.feature} />
           <AirbnbComponent feature={this.props.feature} />
         </div>
       </div>
