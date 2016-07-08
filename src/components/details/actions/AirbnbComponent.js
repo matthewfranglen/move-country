@@ -22,13 +22,11 @@ class AirbnbComponent extends React.Component {
     var url = 'https://www.airbnb.co.uk/s/' + keyword;
 
     return (
-      <div className="airbnb-component">
-        <a className="airbnb-component__link" target="_blank" href={url}>
-          <IconComponent className="airbnb-component__icon" name="bed"></IconComponent>
-          <br />
-          <div className="airbnb-component__label">Accommodation</div>
-        </a>
-      </div>
+      <a className="airbnb-component" target="_blank" href={url}>
+        <IconComponent className="airbnb-component__icon" name="bed"></IconComponent>
+        <br />
+        <div className="airbnb-component__label">Accommodation</div>
+      </a>
     );
   }
 
