@@ -2,6 +2,9 @@
 
 import React from 'react';
 import AirbnbComponent from './AirbnbComponent';
+import CitizenshipComponent from './CitizenshipComponent';
+import FlightsComponent from './FlightsComponent';
+import JobsComponent from './JobsComponent';
 
 require('styles/details/actions/Container.scss');
 
@@ -24,7 +27,10 @@ class ActionsContainerComponent extends React.Component {
           check out {this.props.feature.name}
         </div>
         <div className="actions-container-component__content">
+          <FlightsComponent feature={this.props.feature} />
           <AirbnbComponent feature={this.props.feature} />
+          <JobsComponent feature={this.props.feature} />
+          <CitizenshipComponent feature={this.props.feature} />
         </div>
       </div>
     );
