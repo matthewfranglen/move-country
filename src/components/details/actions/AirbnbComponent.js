@@ -7,7 +7,7 @@ require('styles/details/actions/Airbnb.scss');
 
 class AirbnbComponent extends React.Component {
 
-  static displayName = 'DetailsActionsAirbnbComponent';
+  static displayName = 'AirbnbComponent';
 
   static propTypes = {
     feature: React.PropTypes.object
