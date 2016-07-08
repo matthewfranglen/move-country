@@ -16,13 +16,15 @@
 
   border: thin solid $gray;
   border-radius: 50%;
+
+  background-color: $gray-dark;
   box-shadow: 2px 2px 2px 2px $gray-darker;
-  transition: box-shadow 500ms;
-  transition: background-color 250ms;
+  transition: all 0.3s ease-in-out;
 }
 
 .airbnb-component:hover {
   background-color: $gray;
+  transform: scale(1.1, 1.1);
   box-shadow: 5px 5px 5px 5px $gray-darker;
 }
 
