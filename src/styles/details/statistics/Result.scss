@@ -19,18 +19,40 @@
   border: thin solid $gray;
   border-radius: 50%;
 
-  background-color: $gray-dark;
   box-shadow: 2px 2px 2px 2px $gray-darker;
   transition: all 0.3s ease-in-out;
 }
 
-.statistics-result-component:hover {
-  background-color: $gray;
-  box-shadow: 5px 5px 5px 5px $gray-darker;
+.statistics-result-component--high {
+  background-color: $green;
+}
+.statistics-result-component--high.statistics-result-component--selected,
+.statistics-result-component--high:hover {
+  background-color: $green-light;
 }
 
-.statistics-result-component--selected {
-  background-color: $gray;
+.statistics-result-component--medium {
+  background-color: $yellow;
+}
+.statistics-result-component--medium.statistics-result-component--selected,
+.statistics-result-component--medium:hover {
+  background-color: $yellow-light;
+}
+
+.statistics-result-component--low {
+  background-color: $orange;
+}
+.statistics-result-component--low.statistics-result-component--selected,
+.statistics-result-component--low:hover {
+  background-color: $orange-light;
+}
+
+.statistics-result-component--very_low {
+  background-color: $pink;
+}
+.statistics-result-component--very_low.statistics-result-component--selected,
+.statistics-result-component--very_low:hover {
+  background-color: $pink-light;
 }
 
 .statistics-result-component__icon {

@@ -1,7 +1,7 @@
 'use strict';
 
 import React from 'react';
-import { getDescription, toEmoji } from '../../../lib/statistics';
+import { getDescription, toEmoji, toRank } from '../../../lib/statistics';
 
 require('styles/details/statistics/Result.scss');
 
@@ -33,22 +33,6 @@ class StatisticsResultComponent extends React.Component {
   }
 
   render() {
-//    if (this.props.selected) {
-//      return (
-//        <div onClick={this.onClick} className="statistics-result-component">
-//          <div className="statistics-result-component__summary">
-//            <IconComponent className="statistics-result-component__icon" name="chevron-down"></IconComponent>
-//            <a className="statistics-result-component__value">{this.state.value}</a>
-//            <div className="statistics-result-component__label">{this.state.name}</div>
-//          </div>
-//          <div className="statistics-result-component__detail">
-//            {this.state.detail}
-//          </div>
-//          <a href={this.state.citation} className="statistics-result-component__citation">[source]</a>
-//        </div>
-//      );
-//    }
-
     return (
       <div onClick={this.onClick} className={this.getClassName()} >
         <span className="statistics-result-component__icon">{this.state.value}</span>
@@ -63,7 +47,10 @@ class StatisticsResultComponent extends React.Component {
   }
 
   getClassName() {
-    return makeClassName('statistics-result-component', this.props.selected ? 'statistics-result-component--selected' : 'statistics-result-component--deselected');
+    var rank = toRank(this.props.feature[this.props.type], this.props.type);
+    var colorClass = 'statistics-result-component--' + rank;
+    var selectedClass = this.props.selected ? 'statistics-result-component--selected' : 'statistics-result-component--deselected';
+    return makeClassName('statistics-result-component', colorClass, selectedClass);
   }
 
 }
