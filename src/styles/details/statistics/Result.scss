@@ -24,6 +24,11 @@
   transition: all 0.3s ease-in-out;
 }
 
+.statistics-result-component--selected,
+.statistics-result-component:hover {
+  box-shadow: 5px 5px 5px 5px $gray-darker;
+}
+
 .statistics-result-component--high {
   border-color: $green-light;
   background-color: $green;
