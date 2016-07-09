@@ -3,11 +3,35 @@
  * ========================================================================== */
 
 $white-base:            hsl(255, 255, 255);
-$gray-darker:           #222;
-$gray-dark:             #404040;
-$gray:                  #555;
-$gray-light:            #777;
-$gray-lighter:          #eee;
+$gray-darker:           #212121; // 900
+$gray-dark:             #424242; // 800
+$gray:                  #616161; // 700
+$gray-light:            #757575; // 600
+$gray-lighter:          #EEE;    // 200
+
+$green-darker:          #1B5E20; // 900
+$green-dark:            #2E7D32; // 800
+$green:                 #388E3C; // 700
+$green-light:           #43A047; // 600
+$green-lighter:         #A5D6A7; // 200
+
+$yellow-darker:         #F57F17; // 900
+$yellow-dark:           #F9A825; // 800
+$yellow:                #FBC02D; // 700
+$yellow-light:          #FDD835; // 600
+$yellow-lighter:        #FFF59D; // 200
+
+$orange-darker:         #E65100; // 900
+$orange-dark:           #EF6C00; // 800
+$orange:                #F57C00; // 700
+$orange-light:          #FB8C00; // 600
+$orange-lighter:        #FFCC80; // 200
+
+$pink-darker:           #880E4F; // 900
+$pink-dark:             #AD1457; // 800
+$pink:                  #C2185B; // 700
+$pink-light:            #D81B60; // 600
+$pink-lighter:          #F48FB1; // 200
 
 /*
  * Typography
