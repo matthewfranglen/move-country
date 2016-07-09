@@ -78,4 +78,4 @@ function toRank (value, type) {
   return 'very_low';
 }
 
-export { getTypes, getDescription, toEmoji, toColor };
+export { getTypes, getDescription, toEmoji, toColor, toRank };
