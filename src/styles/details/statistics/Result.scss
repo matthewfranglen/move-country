@@ -16,7 +16,8 @@
   text-decoration: none;
   color: $gray-darker;
 
-  border: thin solid $gray;
+  border-width: thin;
+  border-style: solid;
   border-radius: 50%;
 
   box-shadow: 2px 2px 2px 2px $gray-darker;
@@ -24,6 +25,7 @@
 }
 
 .statistics-result-component--high {
+  border-color: $green-light;
   background-color: $green;
 }
 .statistics-result-component--high.statistics-result-component--selected,
@@ -32,6 +34,7 @@
 }
 
 .statistics-result-component--medium {
+  border-color: $yellow-light;
   background-color: $yellow;
 }
 .statistics-result-component--medium.statistics-result-component--selected,
@@ -40,6 +43,7 @@
 }
 
 .statistics-result-component--low {
+  border-color: $orange-light;
   background-color: $orange;
 }
 .statistics-result-component--low.statistics-result-component--selected,
@@ -48,6 +52,7 @@
 }
 
 .statistics-result-component--very_low {
+  border-color: $pink-light;
   background-color: $pink;
 }
 .statistics-result-component--very_low.statistics-result-component--selected,
