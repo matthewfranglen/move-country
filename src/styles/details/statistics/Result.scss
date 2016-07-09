@@ -1,39 +1,42 @@
 @import '../../variables.scss';
 
 .statistics-result-component {
-  padding: 0 0 16px;
   cursor: pointer;
-  width: 100%;
-}
 
-.statistics-result-component__summary {
+  width: 128px;
+  height: 128px;
+  padding: 16px;
+  margin: 16px;
+
   display: flex;
-  justify-content: flex-start;
-}
+  flex-direction: column;
+  justify-content: center;
 
-.statistics-result-component__icon,
-.statistics-result-component__label {
-  padding: 0 16px;
-}
-
-.statistics-result-component__icon,
-.statistics-result-component__value {
-  width: 16px;
   text-align: center;
+  text-decoration: none;
+  color: $gray-darker;
+
+  border: thin solid $gray;
+  border-radius: 50%;
+
+  background-color: $gray-dark;
+  box-shadow: 2px 2px 2px 2px $gray-darker;
+  transition: all 0.3s ease-in-out;
+}
+
+.statistics-result-component:hover {
+  background-color: $gray;
+  box-shadow: 5px 5px 5px 5px $gray-darker;
+}
+
+.statistics-result-component--selected {
+  background-color: $gray;
+}
+
+.statistics-result-component__icon {
+  font-size: 36pt;
 }
 
 .statistics-result-component__label {
-  text-align: right;
-}
-
-.statistics-result-component__detail {
-  padding: 16px 16px 16px 80px;
-  text-align: justify;
-  color: $gray-light;
-}
-
-.statistics-result-component__citation {
-  float: right;
-  color: $gray;
-  text-decoration: none;
+  font-size: 12pt;
 }

@@ -2,6 +2,7 @@
 
 import React from 'react';
 import StatisticsResultComponent from './ResultComponent';
+import StatisticsDescriptionComponent from './DescriptionComponent';
 import { getTypes } from '../../../lib/statistics';
 
 require('styles/details/statistics/Container.scss');
@@ -21,19 +22,19 @@ class StatisticsContainerComponent extends React.Component {
   }
 
   render() {
-    var feature = this.props.feature;
     var results = getTypes()
-      .filter(type => type in feature)
-      .map(type => (<StatisticsResultComponent key={this.createKey(type)} type={type} feature={feature} selected={this.isSelected(type)} onClick={this.props.onClick} />));
+      .filter(type => type in this.props.feature)
+      .map(type => (<StatisticsResultComponent key={this.createKey(type)} type={type} feature={this.props.feature} selected={this.isSelected(type)} onClick={this.props.onClick} />));
 
     return (
       <div className="statistics-container-component">
         <div className="statistics-container-component__title">
-          is {feature.name} any good?
+          is {this.props.feature.name} any good?
         </div>
         <div className="statistics-container-component__content">
           {results}
         </div>
+        <StatisticsDescriptionComponent type={this.props.type} />
       </div>
     );
   }
