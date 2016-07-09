@@ -1,7 +1,7 @@
 'use strict';
 
 import React from 'react';
-import IconComponent from '../../IconComponent';
+import TileComponent from '../../TileComponent';
 
 require('styles/details/actions/Citizenship.scss');
 
@@ -14,19 +14,13 @@ class CitizenshipComponent extends React.Component {
   };
 
   render() {
-    if (! this.props.feature) {
-      return (<div className="citizenship-component"></div>);
-    }
-
-    var url = this.props.feature.citizenship || 'https://en.wikipedia.org/wiki/Naturalization';
-
     return (
-      <a className="citizenship-component" target="_blank" href={url}>
-        <IconComponent className="citizenship-component__icon" name="flag"></IconComponent>
-        <br />
-        <div className="citizenship-component__label">Citizenship</div>
-      </a>
+      <TileComponent icon="flag" url={this.getUrl()} label="Citizenship" className="citizenship-component" />
     );
+  }
+
+  getUrl() {
+    return this.props.feature.citizenship || 'https://en.wikipedia.org/wiki/Naturalization';
   }
 
 }
