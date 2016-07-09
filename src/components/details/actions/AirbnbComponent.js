@@ -1,7 +1,7 @@
 'use strict';
 
 import React from 'react';
-import IconComponent from '../../IconComponent';
+import TileComponent from '../../TileComponent';
 
 require('styles/details/actions/Airbnb.scss');
 
@@ -14,20 +14,18 @@ class AirbnbComponent extends React.Component {
   };
 
   render() {
+    return (
+      <TileComponent icon="bed" url={this.getUrl()} label="Accommodation" className="airbnb-component" />
+    );
+  }
+
+  getUrl() {
     if (! this.props.feature) {
-      return (<div className="airbnb-component"></div>);
+      return undefined;
     }
 
     var keyword = this.props.feature.airbnb || this.props.feature.name;
-    var url = 'https://www.airbnb.co.uk/s/' + keyword;
-
-    return (
-      <a className="airbnb-component" target="_blank" href={url}>
-        <IconComponent className="airbnb-component__icon" name="bed"></IconComponent>
-        <br />
-        <div className="airbnb-component__label">Accommodation</div>
-      </a>
-    );
+    return 'https://www.airbnb.co.uk/s/' + keyword;
   }
 
 }
