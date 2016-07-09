@@ -1,7 +1,7 @@
 'use strict';
 
 import React from 'react';
-import IconComponent from '../../IconComponent';
+import TileComponent from '../../TileComponent';
 
 require('styles/details/actions/Jobs.scss');
 
@@ -18,16 +18,14 @@ class JobsComponent extends React.Component {
       return (<div className="jobs-component"></div>);
     }
 
-    var keyword = this.props.feature.job || this.props.feature.name;
-    var url = 'http://www.monster.com/jobs/search/?where=' + keyword;
-
     return (
-      <a className="jobs-component" target="_blank" href={url}>
-        <IconComponent className="jobs-component__icon" name="briefcase"></IconComponent>
-        <br />
-        <div className="jobs-component__label">Jobs</div>
-      </a>
+      <TileComponent icon="briefcase" url={this.getUrl()} label="Jobs" className="jobs-component" />
     );
+  }
+
+  getUrl() {
+    var keyword = this.props.feature.job || this.props.feature.name;
+    return 'http://www.monster.com/jobs/search/?where=' + keyword;
   }
 
 }

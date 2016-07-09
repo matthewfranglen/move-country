@@ -1,8 +1,6 @@
-@import '../../variables.scss';
+@import './variables.scss';
 
-.statistics-result-component {
-  cursor: pointer;
-
+.tile-component {
   width: 128px;
   height: 128px;
   padding: 16px;
@@ -24,19 +22,15 @@
   transition: all 0.3s ease-in-out;
 }
 
-.statistics-result-component:hover {
+.tile-component:hover {
   background-color: $gray;
   box-shadow: 5px 5px 5px 5px $gray-darker;
 }
 
-.statistics-result-component--selected {
-  background-color: $gray;
-}
-
-.statistics-result-component__icon {
+.tile-component__icon {
   font-size: 36pt;
 }
 
-.statistics-result-component__label {
+.tile-component__label {
   font-size: 12pt;
 }
