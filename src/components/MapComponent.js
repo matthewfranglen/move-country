@@ -55,7 +55,6 @@ class MapComponent extends React.Component {
     var country = { feature: feature, layer: layer };
     this.geoData.push(country);
 
-    layer.bindPopup(feature.properties.name);
     layer.on('click', () => this.handleClick(feature));
 
     this.updateCountryLayer(country);
