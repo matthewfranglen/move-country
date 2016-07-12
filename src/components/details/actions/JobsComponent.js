@@ -24,8 +24,10 @@ class JobsComponent extends React.Component {
   }
 
   getUrl() {
-    var keyword = this.props.feature.job || this.props.feature.name;
-    return 'http://www.monster.com/jobs/search/?where=' + keyword;
+    if (this.props.feature.job) {
+      return this.props.feature.job;
+    }
+    return 'http://www.totaljobs.com/jobs/in-' + this.props.feature.name;
   }
 
 }
