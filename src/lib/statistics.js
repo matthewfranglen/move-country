@@ -23,9 +23,9 @@ const emoji = {
 };
 
 const colors = {
-  good: '#00FF00',
-  average: '#FFFF00',
-  bad: '#FF0000'
+  good: Color('#00FF00'),
+  average: Color('#FFFF00'),
+  bad: Color('#FF0000')
 };
 
 function getTypes () {
@@ -42,20 +42,14 @@ function toEmoji (value, type) {
 
 function toColor (value, type) {
   const rank = toNumericRank(value, type);
+  const mix = Math.abs(rank - 0.5) * 2;
+  const color = rank === 1   ? colors.good
+              : rank > 0.5   ? colors.good.clone().mix(colors.average, mix)
+              : rank === 0.5 ? colors.average
+              : rank > 0     ? colors.bad.clone().mix(colors.average, mix)
+              : colors.bad;
 
-  if (rank === 1) {
-    return colors.good;
-  }
-  if (rank > 0.5) {
-    return Color(colors.average).mix(Color(colors.good), (rank - 0.5) * 2).hslString();
-  }
-  if (rank === 0.5) {
-    return colors.average;
-  }
-  if (rank > 0) {
-    return Color(colors.average).mix(Color(colors.bad), (0.5 - rank) * 2).hslString();
-  }
-  return colors.bad;
+  return color.hslString();
 }
 
 function toNamedRank (value, type) {
