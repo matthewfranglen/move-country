@@ -1,7 +1,7 @@
 'use strict';
 
 import React from 'react';
-import { getDescription, toEmoji, toRank } from '../../../lib/statistics';
+import { getDescription, toEmoji, toNamedRank } from '../../../lib/statistics';
 
 require('styles/details/statistics/Result.scss');
 
@@ -47,7 +47,7 @@ class StatisticsResultComponent extends React.Component {
   }
 
   getClassName() {
-    var rank = toRank(this.props.feature[this.props.type], this.props.type);
+    var rank = toNamedRank(this.props.feature[this.props.type], this.props.type);
     var colorClass = 'statistics-result-component--' + rank;
     var selectedClass = this.props.selected ? 'statistics-result-component--selected' : 'statistics-result-component--deselected';
     return makeClassName('statistics-result-component', colorClass, selectedClass);
