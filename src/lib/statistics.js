@@ -13,8 +13,6 @@ const statisticsByType = Object.keys(statistics)
         return stats;
     }, {});
 
-console.log(statisticsByType);
-
 const emoji = {
   high: '😎',
   medium: '😊',
