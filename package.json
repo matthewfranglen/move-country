@@ -64,6 +64,7 @@
     "node-sass": "^3.4.2"
   },
   "dependencies": {
+    "color": "^0.11.3",
     "core-js": "^2.0.0",
     "json-loader": "^0.5.4",
     "leaflet": "^0.7.7",
